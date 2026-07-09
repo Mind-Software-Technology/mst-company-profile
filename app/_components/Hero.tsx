@@ -1,68 +1,155 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight, Play, Code, Smartphone, Palette } from "lucide-react";
 import HeroHeadline from "./HeroHeadline";
-
-const fadeUp = (delay = 0) => ({
-  initial: { y: 20, opacity: 0 },
-  animate: { y: 0, opacity: 1 },
-  transition: { duration: 0.7, ease: "easeOut" as const, delay },
-});
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6 text-center">
-      {/* Ambient glow — subtle per design v2.1 */}
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
-        <div className="h-[500px] w-[500px] rounded-full bg-brand-purple/5 blur-[120px]" />
-      </div>
-      <div className="pointer-events-none absolute bottom-0 right-0 h-[300px] w-[300px] rounded-full bg-brand-cyan/5 blur-[100px]" />
+    <section id="beranda" className="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden">
+      {/* Ambient background glow */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gradient-to-tr from-[#8B5CF6]/15 to-[#0EA5E9]/15 rounded-full blur-[120px] pointer-events-none -z-10" />
 
-      <motion.div {...fadeUp(0)} className="relative z-10 flex flex-col items-center">
-        {/* Eyebrow label */}
-        <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 backdrop-blur-sm">
-          <span className="h-1.5 w-1.5 rounded-full bg-brand-cyan" />
-          <span className="text-xs font-medium uppercase tracking-widest text-brand-muted">
-            Mind Software Technology
-          </span>
+      <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        {/* Left — Text Content (7 cols) */}
+        <div className="lg:col-span-7 text-left">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#8B5CF6]/10 border border-[#8B5CF6]/25 text-[#a78bfa] text-xs sm:text-sm font-medium mb-6 shadow-sm"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#8B5CF6] animate-ping" />
+            Solusi Digital Terpercaya
+          </motion.div>
+
+          <HeroHeadline />
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="mt-6 text-base sm:text-lg text-fg-muted max-w-xl leading-relaxed font-light"
+          >
+            Kami membantu perusahaan mentransformasikan ide menjadi perangkat
+            lunak canggih, aman, dan skalabel dengan standar performa tertinggi.
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+            className="mt-8 flex flex-wrap items-center gap-4"
+          >
+            <a
+              href="https://wa.me/6283180553200"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-white rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] transition-all duration-300 shadow-lg shadow-[#8B5CF6]/25 hover:shadow-xl hover:shadow-[#8B5CF6]/40 hover:scale-[1.02]"
+            >
+              Mulai Proyek
+              <ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+            </a>
+            <a
+              href="#portofolio"
+              className="group inline-flex items-center gap-2.5 px-6 py-3.5 text-sm font-semibold text-fg-muted border border-bd hover:border-[#8B5CF6]/40 hover:text-fg hover:bg-pill rounded-xl transition-all duration-300"
+            >
+              <Play size={14} className="text-[#8B5CF6] fill-[#8B5CF6]" />
+              Lihat Portofolio
+            </a>
+          </motion.div>
         </div>
 
-        <HeroHeadline />
-
-        <motion.p
-          {...fadeUp(0.2)}
-          className="mt-6 max-w-2xl text-lg text-brand-muted leading-relaxed"
-        >
-          Mitra solusi TI terpercaya — menghadirkan undangan digital mewah, website
-          berperforma tinggi, dan desain UI/UX berbasis data.
-        </motion.p>
-
+        {/* Right — Interactive Visual Element (5 cols) */}
         <motion.div
-          {...fadeUp(0.4)}
-          className="mt-10 flex flex-wrap items-center justify-center gap-4"
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+          className="lg:col-span-5 flex items-center justify-center relative mt-4 lg:mt-0"
         >
-          <a
-            href="https://wa.me/6283180553200"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 rounded-full bg-brand-purple px-8 py-3.5 text-sm font-semibold text-white shadow-[0_0_20px_rgba(139,92,246,0.25)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(139,92,246,0.4)]"
-          >
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
-            </svg>
-            Konsultasi Gratis
-          </a>
-        </motion.div>
-      </motion.div>
+          {/* Central Code Card */}
+          <div className="relative w-full max-w-[400px]">
+            {/* Main Code Box */}
+            <div className="glass rounded-2xl p-6 relative shadow-2xl border border-bd">
+              {/* Window Controls */}
+              <div className="flex items-center gap-2 mb-5 pb-3 border-b border-bd">
+                <div className="w-3 h-3 rounded-full bg-[#ef4444]/80" />
+                <div className="w-3 h-3 rounded-full bg-[#f59e0b]/80" />
+                <div className="w-3 h-3 rounded-full bg-[#22c55e]/80" />
+                <span className="ml-auto text-xs text-fg-muted font-mono">mst-core.ts</span>
+              </div>
 
-      {/* Scroll indicator */}
-      <motion.div
-        {...fadeUp(0.8)}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-      >
-        <span className="text-[11px] uppercase tracking-widest text-brand-muted/50">Scroll</span>
-        <div className="h-8 w-px bg-gradient-to-b from-brand-muted/30 to-transparent" />
-      </motion.div>
+              {/* Code lines */}
+              <div className="font-mono text-xs sm:text-sm space-y-2.5 text-left">
+                <div>
+                  <span className="text-[#8B5CF6]">const</span>{" "}
+                  <span className="text-[#0EA5E9]">solution</span>{" "}
+                  <span className="text-fg-muted">=</span>{" "}
+                  <span className="text-[#22c55e]">{`{`}</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-fg font-semibold">quality</span>
+                  <span className="text-fg-muted">:</span>{" "}
+                  <span className="text-[#f59e0b]">&quot;premium&quot;</span>
+                  <span className="text-fg-muted">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-fg font-semibold">speed</span>
+                  <span className="text-fg-muted">:</span>{" "}
+                  <span className="text-[#f59e0b]">&quot;blazing&quot;</span>
+                  <span className="text-fg-muted">,</span>
+                </div>
+                <div className="pl-4">
+                  <span className="text-fg font-semibold">scale</span>
+                  <span className="text-fg-muted">:</span>{" "}
+                  <span className="text-[#0EA5E9]">Infinity</span>
+                </div>
+                <div>
+                  <span className="text-[#22c55e]">{`}`}</span>
+                  <span className="text-fg-muted">;</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating Badge — Top Right */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+              className="absolute -top-5 -right-2 sm:-right-6 glass rounded-xl px-4 py-2.5 flex items-center gap-3 shadow-xl border border-bd z-20"
+            >
+              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#0EA5E9] flex items-center justify-center shrink-0">
+                <Code size={16} className="text-white" />
+              </div>
+              <div className="text-left">
+                <div className="text-[10px] text-fg-muted uppercase tracking-wider">Status</div>
+                <div className="text-xs font-semibold text-[#22c55e] flex items-center gap-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#22c55e]" /> Deployed
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Floating Badge — Bottom Left */}
+            <motion.div
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="absolute -bottom-5 -left-2 sm:-left-6 glass rounded-xl px-4 py-2.5 flex items-center gap-3 shadow-xl border border-bd z-20"
+            >
+              <div className="flex -space-x-2 shrink-0">
+                <div className="w-8 h-8 rounded-full bg-[#8B5CF6] flex items-center justify-center border-2 border-surface">
+                  <Smartphone size={14} className="text-white" />
+                </div>
+                <div className="w-8 h-8 rounded-full bg-[#0EA5E9] flex items-center justify-center border-2 border-surface">
+                  <Palette size={14} className="text-white" />
+                </div>
+              </div>
+              <div className="text-left">
+                <div className="text-xs font-bold text-fg">150+ Proyek</div>
+                <div className="text-[10px] text-fg-muted">99% Kepuasan</div>
+              </div>
+            </motion.div>
+          </div>
+        </motion.div>
+      </div>
     </section>
   );
 }

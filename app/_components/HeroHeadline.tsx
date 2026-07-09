@@ -5,16 +5,14 @@ import { motion } from "framer-motion";
 export default function HeroHeadline() {
   return (
     <motion.h1
-      initial={{ opacity: 0, y: 24 }}
+      initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="text-4xl font-extrabold leading-tight tracking-tight md:text-6xl lg:text-7xl max-w-5xl"
-      style={{ letterSpacing: "-0.02em" }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.12] tracking-tight text-fg"
     >
       Building{" "}
-      <span className="bg-gradient-to-r from-[#c084fc] via-[#818cf8] to-[#22d3ee] bg-clip-text text-transparent">
-        digital solution
-      </span>{" "}
+      <span className="gradient-text">digital solution</span>
+      <br />
       for everyone.
     </motion.h1>
   );

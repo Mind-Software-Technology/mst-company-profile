@@ -1,158 +1,193 @@
 "use client";
 
-import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Menu, X, ArrowRight, Sun, Moon } from "lucide-react";
+import { useTheme } from "./ThemeProvider";
 
-const links = [
-  { label: "Beranda", href: "#" },
-  { label: "Tentang", href: "#about" },
-  { label: "Layanan", href: "#services" },
-  { label: "Portofolio", href: "#portfolio" },
-  { label: "Kontak", href: "#contact" },
+const navLinks = [
+  { label: "Beranda", href: "#beranda" },
+  { label: "Tentang", href: "#tentang" },
+  { label: "Layanan", href: "#layanan" },
+  { label: "Portofolio", href: "#portofolio" },
+  { label: "Tim", href: "#tim" },
+  { label: "Kontak", href: "#kontak" },
 ];
 
 export default function Navbar() {
-  const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [active, setActive] = useState("");
+  const [active, setActive] = useState("beranda");
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const { theme, toggleTheme } = useTheme();
 
   useEffect(() => {
-    let ticking = false;
-
-    const updateActiveSection = () => {
-      setScrolled(window.scrollY > 40);
-
-      const sections = links.map((l) => {
-        const id = l.href.replace("#", "") || "hero";
-        const el = id === "hero" ? document.querySelector("section") : document.getElementById(id);
-        if (!el) return { id, top: 0, bottom: 0 };
-        const rect = el.getBoundingClientRect();
-        return { id, top: rect.top, bottom: rect.bottom };
-      });
-
-      const current = sections.find((s) => s.top <= 120 && s.bottom > 120);
-      setActive(current ? current.id : "hero");
-      ticking = false;
-    };
-
     const onScroll = () => {
-      if (!ticking) {
-        window.requestAnimationFrame(updateActiveSection);
-        ticking = true;
+      setScrolled(window.scrollY > 20);
+      const sections = navLinks.map((l) => l.href.slice(1));
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sections[i]);
+        if (el && el.getBoundingClientRect().top <= 120) {
+          setActive(sections[i]);
+          break;
+        }
       }
     };
-
-    updateActiveSection();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const scrollTo = (href: string) => {
+    setMobileOpen(false);
+    const el = document.querySelector(href);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
+
   return (
-    <>
-      <motion.nav
-        initial={{ y: -80, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          scrolled
-            ? "border-b border-white/5 bg-black/60 backdrop-blur-xl shadow-sm"
-            : "bg-transparent"
-        }`}
-      >
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
-          {/* Logo */}
-          <a href="#" className="flex items-center gap-3">
-            <img src="/icon.jpeg" alt="MST Logo" width={32} height={32} className="h-8 w-8 rounded-lg object-cover" />
-            <span className="text-sm font-semibold text-brand-light tracking-tight">
-              Mind Software Technology
-            </span>
+    <header
+      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+        scrolled
+          ? theme === "dark"
+            ? "bg-[#0A0B10]/90 backdrop-blur-2xl border-b border-white/[0.08] shadow-lg shadow-black/30"
+            : "bg-white/90 backdrop-blur-2xl border-b border-black/[0.06] shadow-lg shadow-black/5"
+          : theme === "dark"
+            ? "bg-[#0A0B10]/40 backdrop-blur-md"
+            : "bg-white/40 backdrop-blur-md"
+      }`}
+    >
+      <nav className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+        {/* Logo */}
+        <a
+          href="#beranda"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("#beranda");
+          }}
+          className="flex items-center gap-3 group"
+        >
+          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-[#8B5CF6]/25 group-hover:shadow-[#8B5CF6]/50 transition-all duration-300 border border-bd shrink-0">
+            <img src="/icon.jpeg" alt="MST Logo" className="w-full h-full object-cover" />
+          </div>
+          <span className="font-display text-lg font-bold tracking-tight text-fg">
+            MST
+          </span>
+        </a>
+
+        {/* Desktop Nav */}
+        <div className="hidden md:flex items-center gap-1.5 glass px-3 py-1.5 rounded-full">
+          {navLinks.map((link) => (
+            <button
+              key={link.href}
+              onClick={() => scrollTo(link.href)}
+              className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-colors duration-200 ${
+                active === link.href.slice(1)
+                  ? "text-fg font-semibold"
+                  : "text-fg-muted hover:text-fg"
+              }`}
+            >
+              {link.label}
+              {active === link.href.slice(1) && (
+                <motion.span
+                  layoutId="nav-indicator"
+                  className="absolute inset-0 rounded-full bg-gradient-to-r from-[#8B5CF6]/30 to-[#0EA5E9]/30 border border-bd -z-10"
+                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                />
+              )}
+            </button>
+          ))}
+        </div>
+
+        <div className="flex items-center gap-2">
+          {/* Theme Toggle */}
+          <button
+            onClick={toggleTheme}
+            className="p-2.5 rounded-xl text-fg-muted hover:text-fg hover:bg-pill transition-all duration-300"
+            aria-label="Toggle tema gelap/terang"
+          >
+            <AnimatePresence mode="wait">
+              {theme === "dark" ? (
+                <motion.div
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun size={18} />
+                </motion.div>
+              ) : (
+                <motion.div
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon size={18} />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </button>
+
+          {/* Desktop CTA */}
+          <a
+            href="https://wa.me/6283180553200"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:opacity-90 transition-all duration-300 shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 hover:scale-[1.02]"
+          >
+            Konsultasi Gratis
+            <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
           </a>
 
-          {/* Desktop links */}
-          <div className="hidden items-center gap-1 md:flex">
-            {links.map((l) => {
-              const id = l.href.replace("#", "") || "hero";
-              const isActive = active === id;
-              return (
-                <a
-                  key={l.label}
-                  href={l.href}
-                  className={`relative px-4 py-2 text-sm transition-colors duration-200 rounded-lg ${
-                    isActive
-                      ? "text-white"
-                      : "text-brand-muted hover:text-white"
-                  }`}
-                >
-                  {l.label}
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-active"
-                      className="absolute inset-0 rounded-lg bg-white/5 border border-white/8"
-                      transition={{ type: "spring", stiffness: 380, damping: 30 }}
-                    />
-                  )}
-                  {/* hover underline */}
-                </a>
-              );
-            })}
-            <a
-              href="https://wa.me/6283180553200"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-3 rounded-full bg-brand-purple px-5 py-2 text-sm font-medium text-white transition-all duration-300 hover:bg-brand-purple/80 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)]"
-            >
-              Hubungi Kami
-            </a>
-          </div>
-
-          {/* Mobile toggle */}
+          {/* Mobile Toggle */}
           <button
-            onClick={() => setOpen(!open)}
-            className="flex items-center justify-center md:hidden"
+            onClick={() => setMobileOpen(!mobileOpen)}
+            className="md:hidden p-2.5 rounded-xl text-fg-muted hover:text-fg hover:bg-pill transition-all"
             aria-label="Menu"
           >
-            {open ? (
-              <X className="h-5 w-5 text-brand-light" />
-            ) : (
-              <Menu className="h-5 w-5 text-brand-light" />
-            )}
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
-      {/* Mobile menu — glassmorphism overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
-        {open && (
+        {mobileOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -16 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-0 z-40 flex flex-col items-center justify-center gap-7 bg-black/90 backdrop-blur-2xl md:hidden"
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden border-t border-bd bg-page/95 backdrop-blur-2xl overflow-hidden"
           >
-            {links.map((l) => (
+            <div className="px-6 py-5 space-y-1.5">
+              {navLinks.map((link) => (
+                <button
+                  key={link.href}
+                  onClick={() => scrollTo(link.href)}
+                  className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
+                    active === link.href.slice(1)
+                      ? "text-fg bg-gradient-to-r from-[#8B5CF6]/20 to-[#0EA5E9]/15 border border-[#8B5CF6]/30 font-semibold"
+                      : "text-fg-muted hover:text-fg hover:bg-pill"
+                  }`}
+                >
+                  {link.label}
+                </button>
+              ))}
               <a
-                key={l.label}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-2xl font-bold text-brand-light transition-colors hover:text-brand-cyan"
+                href="https://wa.me/6283180553200"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block w-full mt-4 px-4 py-3 text-sm font-semibold text-white text-center rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9]"
               >
-                {l.label}
+                Konsultasi Gratis
               </a>
-            ))}
-            <a
-              href="https://wa.me/6283180553200"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="mt-4 rounded-full bg-brand-purple px-8 py-3 text-base font-semibold text-white"
-            >
-              Hubungi Kami
-            </a>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
-    </>
+    </header>
   );
 }

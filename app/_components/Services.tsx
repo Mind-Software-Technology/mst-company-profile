@@ -1,155 +1,150 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ScrollText, Globe, Palette } from "lucide-react";
+import { Mail, Globe, Palette, ArrowUpRight, Smartphone } from "lucide-react";
 
 const services = [
   {
-    icon: ScrollText,
+    icon: <Mail size={24} />,
+    image: "/illustrations/invite-celebration.svg",
     title: "Undangan Digital",
-    description: "Undangan interaktif mewah untuk momen spesial Anda.",
-    href: "https://mst-invite-price.vercel.app/",
-    features: [
-      "RSVP Online",
-      "Musik Latar",
-      "Galeri Foto & Video",
-      "Navigasi Peta",
-    ],
-    accent: "brand-purple",
-    accentColor: "#8b5cf6",
+    desc: "Undangan digital interaktif dan elegan dengan fitur RSVP, musik, galeri foto, dan navigasi peta.",
+    features: ["RSVP Online", "Galeri Foto", "Mudah Dibagikan"],
+    color: "#8B5CF6",
+    link: "https://undangandigitalmst.com/",
   },
   {
-    icon: Globe,
+    icon: <Globe size={24} />,
+    image: "/illustrations/web-devices.svg",
     title: "Website Development",
-    description: "Website cepat, modern, dan dioptimalkan untuk performa.",
-    features: [
-      "Performa Tinggi",
-      "Animasi Halus",
-      "Manajemen Data Mudah",
-      "SEO Optimized",
-    ],
-    accentColor: "#06b6d4",
+    desc: "Website profesional berperforma tinggi dengan animasi halus dan kemudahan manajemen konten.",
+    features: ["Responsive Design", "SEO Optimized", "Fast Loading"],
+    color: "#0EA5E9",
+    link: "https://mst-toko.com/",
   },
   {
-    icon: Palette,
-    title: "UI/UX Design",
-    description: "Desain berbasis data yang intuitif dan estetik.",
-    features: [
-      "Riset Perilaku Pengguna",
-      "Sistem Desain",
-      "Audit Visual",
-      "Prototype Interaktif",
-    ],
-    accentColor: "#8b5cf6",
+    icon: <Smartphone size={24} />,
+    image: "/illustrations/web-mobile-apps.svg",
+    title: "Aplikasi Mobile",
+    desc: "Pengembangan aplikasi mobile Android dan iOS berperforma tinggi dengan antarmuka intuitif dan pengalaman pengguna yang mulus.",
+    features: ["Android & iOS", "High Performance", "User Friendly"],
+    color: "#06B6D4",
+    link: "#",
+  },
+  {
+    icon: <Palette size={24} />,
+    image: "/illustrations/uiux-design-process.svg",
+    title: "Desain UI/UX",
+    desc: "Pendekatan berbasis data dengan keindahan estetik dan fungsionalitas intuitif untuk produk digital.",
+    features: ["User Research", "Prototyping", "Design System"],
+    color: "#8B5CF6",
+    link: "#",
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: {
-    transition: { staggerChildren: 0.15 },
-  },
-};
-
-const cardVariants = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1,
-    transition: { duration: 0.6, ease: "easeOut" as const },
-  },
-};
+const fadeUp = (delay: number) => ({
+  initial: { opacity: 0, y: 25, scale: 0.98 },
+  whileInView: { opacity: 1, y: 0, scale: 1 },
+  viewport: { once: true, margin: "-80px" } as const,
+  transition: { duration: 0.5, delay, ease: "easeOut" as const },
+});
 
 export default function Services() {
   return (
-    <section id="services" className="px-6 py-24">
-      <div className="mx-auto max-w-6xl">
-        {/* Header */}
-        <div className="text-center">
-          <p className="text-xs font-medium uppercase tracking-widest text-brand-cyan">
-            Layanan
-          </p>
-          <h2
-            className="mt-3 text-3xl font-extrabold md:text-4xl"
-            style={{ letterSpacing: "-0.02em" }}
-          >
-            <span className="bg-gradient-to-r from-[#c084fc] via-[#818cf8] to-[#22d3ee] bg-clip-text text-transparent">
-              Pilar Layanan Kami
-            </span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-base text-brand-muted leading-relaxed">
-            Tiga pilar utama yang menjadi fondasi setiap solusi digital dari MST.
-          </p>
-        </div>
+    <section id="layanan" className="py-20 md:py-24 relative">
+      <div className="section-divider absolute top-0 inset-x-0" />
 
-        {/* Cards */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
-          className="mt-16 grid gap-6 md:grid-cols-3"
-        >
-          {services.map((s) => (
+      <div className="max-w-6xl mx-auto px-6 pt-8">
+        <motion.div {...fadeUp(0)} className="text-center mb-16">
+          <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
+            Layanan Kami
+          </span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4">
+            Solusi Lengkap untuk{" "}
+            <span className="gradient-text">Bisnis Digital</span>
+          </h2>
+          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-light">
+            Dari konsep hingga peluncuran, kami hadir di setiap tahap perjalanan
+            digital Anda.
+          </p>
+        </motion.div>
+
+        <div className="grid sm:grid-cols-2 gap-8">
+          {services.map((s, i) => (
             <motion.div
               key={s.title}
-              variants={cardVariants}
-              className="group relative rounded-2xl border border-white/8 bg-brand-surface/60 p-8 backdrop-blur-sm transition-all duration-300 hover:border-white/16"
+              {...fadeUp(0.1 * (i + 1))}
+              whileHover={{ y: -6 }}
+              transition={{ duration: 0.3 }}
+              className="group relative rounded-2xl bg-surface border border-bd p-8 hover:border-[#8B5CF6]/40 cursor-pointer transition-all duration-300 shadow-xl"
+              style={{
+                boxShadow: "0 10px 30px -15px rgba(0,0,0,0.15)",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLElement).style.boxShadow = `0 16px 40px -12px ${s.color}33`;
+                (e.currentTarget as HTMLElement).style.borderColor = `${s.color}55`;
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLElement).style.boxShadow = "0 10px 30px -15px rgba(0,0,0,0.15)";
+                (e.currentTarget as HTMLElement).style.borderColor = "var(--color-border-subtle)";
+              }}
             >
-              {/* Clickable overlay for services with href */}
-              {s.href && (
+              <div className="relative z-10 text-left">
+                <div className="flex items-start justify-between gap-4 mb-6">
+                  <div
+                    className="w-13 h-13 rounded-xl flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110 shadow-lg shrink-0"
+                    style={{ background: `linear-gradient(135deg, ${s.color}, ${s.color}88)` }}
+                  >
+                    {s.icon}
+                  </div>
+                  {s.image && (
+                    <img
+                      src={s.image}
+                      alt={s.title}
+                      className="w-20 h-20 object-contain opacity-90 transition-transform duration-300 group-hover:scale-105"
+                    />
+                  )}
+                </div>
+
+                <h3 className="font-display text-xl font-bold text-fg mb-3">
+                  {s.title}
+                </h3>
+                <p className="text-sm text-fg-muted leading-relaxed mb-6 font-light">
+                  {s.desc}
+                </p>
+
+                <div className="space-y-2 mb-8">
+                  {s.features.map((f) => (
+                    <div
+                      key={f}
+                      className="flex items-center gap-2.5 text-xs text-fg-muted"
+                    >
+                      <span
+                        className="w-1.5 h-1.5 rounded-full"
+                        style={{ backgroundColor: s.color }}
+                      />
+                      {f}
+                    </div>
+                  ))}
+                </div>
+
                 <a
-                  href={s.href}
+                  href={s.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="absolute inset-0 z-10 rounded-2xl"
-                  aria-label={`Buka ${s.title}`}
-                />
-              )}
-
-              {/* Icon */}
-              <div
-                className="flex h-12 w-12 items-center justify-center rounded-xl border transition-colors duration-300"
-                style={{
-                  background: `${s.accentColor}12`,
-                  borderColor: `${s.accentColor}25`,
-                  color: s.accentColor,
-                }}
-              >
-                <s.icon className="h-6 w-6" />
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider transition-opacity duration-300 hover:opacity-80"
+                  style={{ color: s.color }}
+                >
+                  Selengkapnya
+                  <ArrowUpRight
+                    size={14}
+                    className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                  />
+                </a>
               </div>
-
-              <h3 className="mt-6 text-lg font-semibold text-brand-light">
-                {s.title}
-              </h3>
-              <p className="mt-2 text-sm text-brand-muted leading-relaxed">
-                {s.description}
-              </p>
-
-              <ul className="mt-5 space-y-2.5">
-                {s.features.map((f) => (
-                  <li key={f} className="flex items-center gap-3 text-sm text-brand-muted">
-                    <span
-                      className="h-1.5 w-1.5 shrink-0 rounded-full"
-                      style={{ background: s.accentColor }}
-                    />
-                    {f}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Arrow for clickable cards */}
-              {s.href && (
-                <div className="mt-6 flex items-center gap-1.5 text-xs font-medium text-brand-cyan opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                  Lihat Detail
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </div>
-              )}
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

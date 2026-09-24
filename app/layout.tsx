@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import ThemeProvider from "./_components/ThemeProvider";
 
@@ -14,14 +15,10 @@ const satoshi = localFont({
   display: "swap",
 });
 
-const clashDisplay = localFont({
-  src: [
-    { path: "../public/fonts/clash-display-400.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/clash-display-500.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/clash-display-600.woff2", weight: "600", style: "normal" },
-    { path: "../public/fonts/clash-display-700.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-clash-display",
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["500", "600", "700"],
+  variable: "--font-space-grotesk",
   display: "swap",
 });
 
@@ -56,7 +53,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`dark scroll-smooth ${satoshi.variable} ${clashDisplay.variable}`}>
+    <html lang="id" className={`dark scroll-smooth ${satoshi.variable} ${spaceGrotesk.variable}`}>
       <body className="font-body antialiased selection:bg-[#8B5CF6]/30 selection:text-white overflow-x-hidden">
         <ThemeProvider>{children}</ThemeProvider>
       </body>

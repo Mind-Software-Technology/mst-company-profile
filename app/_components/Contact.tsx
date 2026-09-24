@@ -3,13 +3,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
-
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 25 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.5, delay },
-});
+import { fadeUp } from "@/lib/animations";
+import WaveDivider from "./WaveDivider";
 
 const contactMethods = [
   {
@@ -79,8 +74,8 @@ ${formData.message}`;
   };
 
   return (
-    <section id="kontak" className="py-20 md:py-24 relative overflow-hidden">
-      <div className="section-divider absolute top-0 inset-x-0" />
+    <section id="kontak" className="py-20 md:py-24 relative overflow-hidden bg-page">
+      <WaveDivider from="surface" to="page" />
 
       {/* Ambient background glow */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[140px] pointer-events-none" />
@@ -90,11 +85,12 @@ ${formData.message}`;
           <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
             Hubungi Kami
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4">
-            Mulai Langkah <span className="gradient-text">Transformasi Anda</span>
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
+            Punya Ide Digital?{" "}
+            <span className="gradient-text">Mari Bangun Bersama.</span>
           </h2>
           <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed">
-            Punya ide atau kebutuhan sistem digital untuk bisnis Anda? Mari diskusikan bersama tim teknis kami secara langsung.
+            Ceritakan kebutuhan bisnis Anda — tim teknis kami akan merespons langsung dan membantu merumuskan langkah paling tepat.
           </p>
         </motion.div>
 
@@ -220,7 +216,7 @@ ${formData.message}`;
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-xl font-bold text-white text-sm bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:opacity-90 transition-all duration-300 shadow-lg shadow-[#8B5CF6]/25 flex items-center justify-center gap-2"
+                className="w-full py-4 px-6 rounded-xl font-bold text-white text-sm bg-[#8B5CF6] hover:bg-[#7c4de6] transition-all duration-300 shadow-lg shadow-[#8B5CF6]/25 flex items-center justify-center gap-2"
               >
                 {submitted ? (
                   <>

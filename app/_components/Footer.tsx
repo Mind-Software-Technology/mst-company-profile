@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Heart, Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { fadeUp } from "@/lib/animations";
 
 function InstagramIcon() {
   return (
@@ -22,14 +23,17 @@ function TikTokIcon() {
 const footerLinks: Record<string, { label: string; href: string }[]> = {
   Layanan: [
     { label: "Undangan Digital", href: "https://undangandigitalmst.com/" },
-    { label: "Website Profesional", href: "https://mst-toko.com/" },
+    { label: "Website Development", href: "https://mst-toko.com/" },
     { label: "Aplikasi Mobile", href: "#layanan" },
     { label: "Desain UI/UX", href: "#layanan" },
+    { label: "Custom Software Development", href: "#layanan" },
+    { label: "Programming Education", href: "#layanan" },
   ],
   Navigasi: [
     { label: "Beranda", href: "#beranda" },
     { label: "Tentang", href: "#tentang" },
     { label: "Layanan", href: "#layanan" },
+    { label: "Proses", href: "#proses" },
     { label: "Portofolio", href: "#portofolio" },
     { label: "Tim", href: "#tim" },
     { label: "Kontak", href: "#kontak" },
@@ -53,13 +57,6 @@ const contactItems = [
     href: null,
   },
 ];
-
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 20 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true } as const,
-  transition: { duration: 0.4, delay },
-});
 
 export default function Footer() {
   const scrollTo = (href: string) => {

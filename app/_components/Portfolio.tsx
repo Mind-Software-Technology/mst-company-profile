@@ -1,7 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, FolderPlus } from "lucide-react";
+import { fadeUp, fadeUpScale } from "@/lib/animations";
+import WaveDivider from "./WaveDivider";
 
 const projects = [
   {
@@ -12,6 +14,7 @@ const projects = [
     image: "/undangan.png",
     link: "https://mst-invite-price.vercel.app/",
     tags: ["React", "Node.js"],
+    color: "#8B5CF6",
   },
   {
     title: "MST Tiket Management",
@@ -21,97 +24,117 @@ const projects = [
     image: "/tiket.png",
     link: "https://mst-ticket-manager.vercel.app/",
     tags: ["Next.js", "Tailwind", "Supabase", "Realtime API"],
+    color: "#0EA5E9",
   },
 ];
 
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 25, scale: 0.98 },
-  whileInView: { opacity: 1, y: 0, scale: 1 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.5, delay },
-});
-
 export default function Portfolio() {
   return (
-    <section id="portofolio" className="py-20 md:py-24 relative">
-      <div className="section-divider absolute top-0 inset-x-0" />
+    <section id="portofolio" className="py-24 md:py-32 relative overflow-hidden bg-surface">
+      <WaveDivider from="page" to="surface" />
 
-      <div className="max-w-6xl mx-auto px-6 pt-8">
-        <motion.div {...fadeUp(0)} className="text-center mb-16">
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8B5CF6]/12 rounded-full blur-[130px] pointer-events-none" />
+
+      <div className="max-w-6xl mx-auto px-6">
+        <motion.div {...fadeUp(0)} className="max-w-2xl mb-20">
           <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
             Portofolio
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
             Proyek <span className="gradient-text">Unggulan</span> Kami
           </h2>
-          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-light">
-            Beberapa karya terbaik yang telah kami kembangkan untuk mendukung kesuksesan digital klien kami.
+          <p className="text-fg-muted text-base sm:text-lg font-light">
+            Beberapa studi kasus nyata dari klien yang telah bertransformasi bersama kami.
           </p>
         </motion.div>
 
-        {/* Portfolio Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((p, i) => (
-            <motion.div
-              key={p.title}
-              {...fadeUp(0.15 * (i + 1))}
-              className="group relative rounded-2xl bg-surface border border-bd overflow-hidden hover:border-[#8B5CF6]/40 transition-all duration-500 shadow-xl flex flex-col"
-            >
-              {/* Image Container */}
-              <div className="relative h-64 sm:h-72 overflow-hidden bg-page">
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-surface via-surface/20 to-transparent" />
-
-                {/* Category badge */}
-                <div className="absolute top-4 left-4 px-3 py-1.5 rounded-lg bg-surface/80 backdrop-blur-md text-xs font-medium text-fg border border-bd">
-                  {p.category}
-                </div>
-
-                {/* External link button */}
-                <a
-                  href={p.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="absolute top-4 right-4 p-2.5 rounded-xl bg-surface/80 backdrop-blur-md text-fg opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0 hover:bg-[#8B5CF6] hover:text-white border border-bd hover:border-[#8B5CF6]"
-                  aria-label={`Kunjungi ${p.title}`}
+        <div className="flex flex-col gap-24 md:gap-28">
+          {projects.map((p, i) => {
+            const mirrored = i % 2 === 1;
+            return (
+              <div key={p.title} className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+                <motion.div
+                  {...fadeUpScale(0)}
+                  className={`lg:col-span-7 relative ${mirrored ? "lg:order-2" : ""}`}
                 >
-                  <ArrowUpRight size={16} />
-                </a>
+                  <div className="rounded-2xl overflow-hidden shadow-2xl border border-bd">
+                    <div className="flex items-center gap-1.5 px-4 py-2.5 bg-surface border-b border-bd">
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#ef4444]/70" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]/70" />
+                      <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e]/70" />
+                    </div>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={p.image} alt={p.title} className="w-full h-auto object-cover" />
+                  </div>
+                </motion.div>
 
-                {/* Success Metric Badge */}
-                <div className="absolute bottom-4 left-4 px-3 py-1.5 rounded-lg bg-[#8B5CF6]/25 backdrop-blur-md text-xs font-semibold text-fg border border-[#8B5CF6]/30 shadow-lg">
-                  ✦ {p.metric}
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-7 flex-1 flex flex-col justify-between text-left">
-                <div>
-                  <h3 className="font-display text-xl font-bold text-fg mb-2">
+                <motion.div {...fadeUp(0.1)} className={`lg:col-span-5 ${mirrored ? "lg:order-1" : ""}`}>
+                  <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: p.color }}>
+                    {p.category}
+                  </span>
+                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-fg mb-6">
                     {p.title}
                   </h3>
-                  <p className="text-sm text-fg-muted leading-relaxed mb-6 font-light">
+
+                  <p className="text-sm sm:text-base text-fg-muted leading-relaxed mb-4 font-light max-w-md">
                     {p.desc}
                   </p>
-                </div>
+                  <p className="text-sm font-semibold mb-6" style={{ color: p.color }}>
+                    ✦ {p.metric}
+                  </p>
 
-                <div className="flex flex-wrap gap-2 pt-4 border-t border-bd">
-                  {p.tags.map((t) => (
-                    <span
-                      key={t}
-                      className="px-2.5 py-1 text-xs font-medium rounded-md bg-pill text-fg-muted border border-bd"
-                    >
-                      {t}
-                    </span>
-                  ))}
-                </div>
+                  <div className="flex flex-wrap gap-2 mb-7">
+                    {p.tags.map((t) => (
+                      <span key={t} className="px-2.5 py-1 text-xs font-medium rounded-md bg-pill text-fg-muted border border-bd">
+                        {t}
+                      </span>
+                    ))}
+                  </div>
+
+                  <a
+                    href={p.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-center gap-2 text-sm font-semibold border-b border-bd pb-1 hover:border-current transition-colors duration-300"
+                    style={{ color: p.color }}
+                  >
+                    Kunjungi Proyek
+                    <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </a>
+                </motion.div>
               </div>
-            </motion.div>
-          ))}
+            );
+          })}
+
+          {/* Coming soon — full-width honest teaser banner */}
+          <motion.div
+            {...fadeUp(0)}
+            className="rounded-3xl border border-dashed border-bd bg-page/50 p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
+          >
+            <div className="flex items-center gap-5">
+              <div className="w-14 h-14 rounded-2xl bg-pill border border-bd flex items-center justify-center text-fg-muted shrink-0">
+                <FolderPlus size={26} />
+              </div>
+              <div>
+                <span className="inline-block text-xs font-semibold text-fg-muted uppercase tracking-widest mb-1.5">
+                  Studi Kasus Berikutnya
+                </span>
+                <h3 className="font-display text-xl font-bold text-fg-muted">
+                  Segera Hadir
+                </h3>
+                <p className="text-sm text-fg-muted font-light mt-1 max-w-lg">
+                  Proyek baru sedang kami kerjakan bersama klien — nantikan ceritanya di sini.
+                </p>
+              </div>
+            </div>
+            <a
+              href="#kontak"
+              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-pill border border-bd text-fg-muted hover:text-fg hover:border-[#8B5CF6]/40 text-sm font-semibold transition-colors duration-300"
+            >
+              Jadi Klien Berikutnya
+              <ArrowUpRight size={15} />
+            </a>
+          </motion.div>
         </div>
       </div>
     </section>

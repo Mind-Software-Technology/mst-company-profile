@@ -9,6 +9,7 @@ const navLinks = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
+  { label: "Proses", href: "#proses" },
   { label: "Portofolio", href: "#portofolio" },
   { label: "Tim", href: "#tim" },
   { label: "Kontak", href: "#kontak" },
@@ -91,7 +92,7 @@ export default function Navbar() {
               {active === link.href.slice(1) && (
                 <motion.span
                   layoutId="nav-indicator"
-                  className="absolute inset-0 rounded-full bg-gradient-to-r from-[#8B5CF6]/30 to-[#0EA5E9]/30 border border-bd -z-10"
+                  className="absolute inset-0 rounded-full bg-[#8B5CF6]/25 border border-bd -z-10"
                   transition={{ type: "spring", stiffness: 400, damping: 30 }}
                 />
               )}
@@ -136,7 +137,7 @@ export default function Navbar() {
             href="https://wa.me/6283180553200"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] hover:opacity-90 transition-all duration-300 shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 hover:scale-[1.02]"
+            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white rounded-xl bg-[#8B5CF6] hover:bg-[#7c4de6] transition-all duration-300 shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 hover:scale-[1.02]"
           >
             Konsultasi Gratis
             <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
@@ -169,7 +170,7 @@ export default function Navbar() {
                   onClick={() => scrollTo(link.href)}
                   className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
                     active === link.href.slice(1)
-                      ? "text-fg bg-gradient-to-r from-[#8B5CF6]/20 to-[#0EA5E9]/15 border border-[#8B5CF6]/30 font-semibold"
+                      ? "text-fg bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 font-semibold"
                       : "text-fg-muted hover:text-fg hover:bg-pill"
                   }`}
                 >
@@ -180,7 +181,7 @@ export default function Navbar() {
                 href="https://wa.me/6283180553200"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full mt-4 px-4 py-3 text-sm font-semibold text-white text-center rounded-xl bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9]"
+                className="block w-full mt-4 px-4 py-3 text-sm font-semibold text-white text-center rounded-xl bg-[#8B5CF6]"
               >
                 Konsultasi Gratis
               </a>

@@ -3,6 +3,8 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star, ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import { fadeUp } from "@/lib/animations";
+import WaveDivider from "./WaveDivider";
 
 const testimonials = [
   {
@@ -28,13 +30,6 @@ const testimonials = [
   },
 ];
 
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 25 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.5, delay },
-});
-
 export default function Testimonials() {
   const [current, setCurrent] = useState(0);
 
@@ -44,8 +39,10 @@ export default function Testimonials() {
     setCurrent((c) => (c === testimonials.length - 1 ? 0 : c + 1));
 
   return (
-    <section id="testimoni" className="py-20 md:py-24 relative">
-      <div className="section-divider absolute top-0 inset-x-0" />
+    <section id="testimoni" className="py-20 md:py-24 relative overflow-hidden bg-surface">
+      <WaveDivider from="page" to="surface" />
+
+      <div className="absolute top-0 left-1/4 w-80 h-80 bg-[#0EA5E9]/12 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6 pt-8">
         <motion.div {...fadeUp(0)} className="text-center mb-16">
@@ -93,7 +90,7 @@ export default function Testimonials() {
                   </p>
 
                   <div className="flex items-center justify-center gap-3.5">
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-[#8B5CF6] to-[#0EA5E9] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/25">
+                    <div className="w-11 h-11 rounded-full bg-[#8B5CF6] flex items-center justify-center shadow-lg shadow-[#8B5CF6]/25">
                       <span className="font-display text-xs font-bold text-white">
                         {testimonials[current].initials}
                       </span>
@@ -136,7 +133,7 @@ export default function Testimonials() {
                 onClick={() => setCurrent(i)}
                 className={`h-2 rounded-full transition-all duration-300 ${
                   i === current
-                    ? "bg-gradient-to-r from-[#8B5CF6] to-[#0EA5E9] w-8"
+                    ? "bg-[#8B5CF6] w-8"
                     : "bg-pill hover:bg-pill-hover border border-bd w-2"
                 }`}
                 aria-label={`Lihat Testimoni ${i + 1}`}

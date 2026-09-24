@@ -2,13 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Target, Compass, CheckCircle2, Sparkles, Shield, Zap } from "lucide-react";
-
-const fadeUp = (delay: number) => ({
-  initial: { opacity: 0, y: 25 },
-  whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" } as const,
-  transition: { duration: 0.5, delay },
-});
+import { fadeUp } from "@/lib/animations";
+import WaveDivider from "./WaveDivider";
 
 const missions = [
   "Mengembangkan perangkat lunak berkualitas tinggi dengan arsitektur modern yang cepat dan aman.",
@@ -37,45 +32,50 @@ const coreValues = [
 
 export default function About() {
   return (
-    <section id="tentang" className="py-20 md:py-24 relative overflow-hidden">
-      <div className="section-divider absolute top-0 inset-x-0" />
+    <section id="tentang" className="py-20 md:py-24 relative overflow-hidden bg-surface">
+      <WaveDivider from="page" to="surface" />
 
       {/* Ambient background glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gradient-to-tr from-[#8B5CF6]/15 to-[#0EA5E9]/15 blur-[120px] pointer-events-none -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-[#8B5CF6]/15 blur-[120px] pointer-events-none -z-10" />
 
       <div className="max-w-6xl mx-auto px-6 pt-8">
-        <motion.div {...fadeUp(0)} className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
-            Tentang Kami & Visi Misi
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4">
-            Mewujudkan Inovasi &{" "}
-            <span className="gradient-text">Keunggulan Digital</span>
-          </h2>
-          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed">
-            Mind Software Technology (MST) hadir sebagai mitra transformasi digital terpercaya yang menggabungkan kreativitas desain dengan ketajaman teknologi rekayasa perangkat lunak.
-          </p>
-        </motion.div>
+        <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
+          Tentang Kami & Visi Misi
+        </span>
 
-        {/* Core Values Grid */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          {coreValues.map((v, i) => (
-            <motion.div
-              key={v.title}
-              {...fadeUp(0.1 * (i + 1))}
-              className="p-6 rounded-2xl bg-surface/80 backdrop-blur-md border border-bd hover:border-[#8B5CF6]/40 transition-all duration-300 group shadow-lg"
-            >
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#8B5CF6]/20 to-[#0EA5E9]/20 border border-bd flex items-center justify-center text-[#8B5CF6] group-hover:text-fg group-hover:scale-110 transition-all duration-300 mb-4">
-                {v.icon}
-              </div>
-              <h3 className="font-display text-lg font-bold text-fg mb-2">
-                {v.title}
-              </h3>
-              <p className="text-xs sm:text-sm text-fg-muted font-light leading-relaxed">
-                {v.desc}
-              </p>
-            </motion.div>
-          ))}
+        {/* Editorial split — big statement left, values as a list right */}
+        <div className="grid lg:grid-cols-12 gap-10 lg:gap-16 mb-20 items-start">
+          <motion.div {...fadeUp(0)} className="lg:col-span-5">
+            <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-6 leading-[1.15] text-balance">
+              Kami hadir karena banyak bisnis punya ide bagus,{" "}
+              <span className="gradient-text">tapi tak punya mitra teknis yang bisa dipercaya.</span>
+            </h2>
+            <p className="text-fg-muted text-base sm:text-lg font-light leading-relaxed">
+              Mind Software Technology (MST) menggabungkan kreativitas desain dengan ketajaman rekayasa perangkat lunak — bukan sekadar mengerjakan brief, tapi ikut memikirkan cara kerja produk digital yang akan bertahan lama.
+            </p>
+          </motion.div>
+
+          <div className="lg:col-span-7 divide-y divide-bd border-t border-b border-bd">
+            {coreValues.map((v, i) => (
+              <motion.div
+                key={v.title}
+                {...fadeUp(0.1 * (i + 1))}
+                className="group flex items-start gap-5 py-6"
+              >
+                <div className="w-11 h-11 shrink-0 rounded-xl bg-[#8B5CF6]/15 border border-bd flex items-center justify-center text-[#8B5CF6] group-hover:scale-110 group-hover:text-fg transition-all duration-300">
+                  {v.icon}
+                </div>
+                <div>
+                  <h3 className="font-display text-lg font-bold text-fg mb-1.5">
+                    {v.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-fg-muted font-light leading-relaxed max-w-md">
+                    {v.desc}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
 
         {/* Visi & Misi Cards */}
@@ -86,7 +86,14 @@ export default function About() {
             className="lg:col-span-5 relative rounded-3xl bg-surface border border-bd p-8 sm:p-10 flex flex-col justify-between shadow-2xl overflow-hidden group hover:border-[#8B5CF6]/50 transition-all duration-500"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-[#8B5CF6]/10 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none group-hover:bg-[#8B5CF6]/20 transition-all duration-500" />
-            
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/illustrations/about-collaboration.svg"
+              alt=""
+              aria-hidden="true"
+              className="absolute -top-4 -right-4 w-40 h-40 opacity-[0.12] pointer-events-none select-none"
+            />
+
             <div>
               <div className="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 text-xs font-semibold text-[#8B5CF6] mb-6">
                 <Target size={14} />

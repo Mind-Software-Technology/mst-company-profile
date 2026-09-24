@@ -1,0 +1,1160 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{"colors":{"primary":"#d0bcff","primary-container":"#a078ff","error-container":"#93000a","tertiary-fixed":"#e3dfff","inverse-on-surface":"#2c303b","secondary-fixed-dim":"#7bd0ff","outline":"#958ea0","on-secondary-container":"#00374d","secondary":"#7bd0ff","tertiary":"#c4c1fb","surface-variant":"#313540","error":"#ffb4ab","surface-container-highest":"#313540","secondary-container":"#00a6e0","secondary-fixed":"#c4e7ff","on-primary-fixed-variant":"#5516be","tertiary-container":"#8e8bc2","outline-variant":"#494454","on-secondary-fixed":"#001e2c","on-primary":"#3c0091","surface-container-low":"#171b26","surface-dim":"#0f131d","on-tertiary-fixed-variant":"#444173","on-surface-variant":"#cbc3d7","primary-fixed-dim":"#d0bcff","primary-fixed":"#e9ddff","on-secondary-fixed-variant":"#004c69","inverse-primary":"#6d3bd7","surface-tint":"#d0bcff","surface-container-lowest":"#0a0e18","on-error":"#690005","surface-container":"#1c1f2a","tertiary-fixed-dim":"#c4c1fb","on-primary-container":"#340080","on-error-container":"#ffdad6","surface":"#0f131d","on-tertiary-container":"#262354","surface-bright":"#353944","on-primary-fixed":"#23005c","on-tertiary-fixed":"#181445","on-background":"#dfe2f1","on-surface":"#dfe2f1","on-secondary":"#00354a","surface-container-high":"#262a35","background":"#0f131d","on-tertiary":"#2d2a5b","inverse-surface":"#dfe2f1"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-2xl":"4rem","space-xl":"2.5rem","gutter-sm":"1rem","margin":"1.5rem","space-xs":"0.25rem","margin-lg":"5rem","space-sm":"0.5rem","space-lg":"1.5rem","gutter-lg":"2.5rem","margin-md":"3rem","space-md":"1rem","gutter":"1.5rem"},"fontFamily":{"display-hero-mobile":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-mono-sm":["JetBrains Mono"],"label-mono-lg":["JetBrains Mono"],"headline-sm":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"display-hero":["Plus Jakarta Sans"],"body-lg":["Plus Jakarta Sans"],"body-md":["Plus Jakarta Sans"],"label-code-badge":["JetBrains Mono"]},"fontSize":{"display-hero-mobile":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"800"}],"headline-lg-mobile":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["13px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-lg":["40px",{"lineHeight":"48px","letterSpacing":"-0.025em","fontWeight":"700"}],"label-mono-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.02em","fontWeight":"500"}],"label-mono-lg":["14px",{"lineHeight":"20px","letterSpacing":"-0.01em","fontWeight":"500"}],"headline-sm":["20px",{"lineHeight":"28px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["24px",{"lineHeight":"32px","letterSpacing":"-0.015em","fontWeight":"600"}],"display-hero":["56px",{"lineHeight":"64px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-lg":["18px",{"lineHeight":"28px","letterSpacing":"-0.005em","fontWeight":"400"}],"body-md":["15px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"label-code-badge":["11px",{"lineHeight":"14px","letterSpacing":"0.06em","fontWeight":"600"}]}}}}</script></head><body class="bg-surface text-on-surface font-body-md text-body-md antialiased selection:bg-primary-container selection:text-on-primary"><header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-sm flex-shrink-0"><img alt="Brand logo. - Primary color: #8b5cf6
+- Font: plusJakartaSans
+- Mode: dark
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XG4oCZtDj2ir69WgpWKXJravX1-BlTr9zsOCvRIDynQ_Qn4DeqeXiKTPbKE_I_DOhFTWyx-DDW5DIx_RrOyWrUJdtgvk0nfc41u8kPbgjFZ8zLWCQsAEHUGcq-Xki_96EAmZiE_cYnwY-xC0rnoLkW341C8O4yzibUdjwWcP2yuhc3PkCfREc3MzmylBdwPVjacJdNK1BgLUlIugMy1At8WxFpkr6jNtruhgCKI-PVhb-yB5GyY7QYFKk"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface font-bold tracking-tight leading-none">MST</span><span class="font-label-mono-sm text-label-mono-sm text-secondary tracking-widest uppercase">Mind Software Tech</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-surface-container text-primary font-semibold"><a aria-current="page" class="px-space-sm py-space-xs rounded-lg transition-colors bg-surface-container text-primary font-semibold" data-path="beranda" href="#">Beranda</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="tentang" href="#">Tentang</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="layanan" href="#">Layanan</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="proses" href="#">Proses</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="portofolio" href="#">Portofolio</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="tim" href="#">Tim</a><a class="px-space-sm py-space-xs rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="kontak" href="#">Kontak</a></nav><div class="flex items-center gap-space-sm"><div class="flex items-center bg-surface-container-high rounded-full p-1 shadow-inner"><button aria-label="Toggle color mode" class="p-1.5 rounded-full bg-surface-container text-secondary flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[16px]">dark_mode</span></button><button aria-label="Toggle light mode" class="p-1.5 rounded-full text-outline hover:text-on-surface flex items-center justify-center" type="button"><span class="material-symbols-outlined text-[16px]">light_mode</span></button></div><a class="hidden sm:inline-flex items-center justify-center px-space-md py-space-xs rounded-lg font-headline-sm text-label-mono-lg bg-primary-container text-on-primary-container hover:bg-primary hover:text-on-primary transition-all duration-200 shadow-[0_0_24px_-6px_rgba(139,92,246,0.35)]" data-path="konsultasi" href="#">Konsultasi Gratis</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-surface min-h-[calc(100vh-80px)]"><div class="flex flex-col w-full text-on-surface selection:bg-primary-container selection:text-on-primary">
+<!-- ========================================== -->
+<!-- 1. HERO SECTION (Asymmetric 12-col Desktop) -->
+<!-- ========================================== -->
+<section class="relative w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-xl pb-space-2xl overflow-hidden">
+<!-- Ambient Chromatic Bloom -->
+<div class="absolute -top-32 -left-20 w-[500px] h-[500px] rounded-full bg-primary-container/10 blur-[130px] pointer-events-none -z-10"></div>
+<div class="absolute top-40 right-0 w-[420px] h-[420px] rounded-full bg-secondary/10 blur-[110px] pointer-events-none -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left Column: Editorial Copy (Col span 7) -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<!-- Status Pill -->
+<div class="inline-flex items-center gap-space-xs bg-surface-container-high px-space-md py-1.5 rounded-full w-fit">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="w-2 h-2 rounded-full bg-secondary -ml-3"></span>
+<span class="font-label-code-badge text-label-code-badge tracking-widest text-secondary uppercase font-semibold">SOLUSI DIGITAL TERPERCAYA // V4.8</span>
+</div>
+<!-- Main Headline -->
+<h1 class="font-display-hero text-display-hero text-on-surface tracking-tight leading-tight">
+          Kami membangun software, <br class="hidden sm:inline"/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-tertiary">bukan sekadar tampilan.</span>
+</h1>
+<!-- Subheadline -->
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
+          Mind Software Technology (MST) adalah studio teknologi dan rekayasa perangkat lunak elit di Indonesia. Kami memadukan arsitektur sistem berskala enterprise, kecepatan performa mutlak, dan desain human-centric untuk mentransformasi ambisi bisnis Anda.
+        </p>
+<!-- CTA Buttons Group -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg font-headline-sm text-label-mono-lg font-semibold bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary shadow-[0_0_32px_-6px_rgba(160,120,255,0.45)] hover:shadow-[0_0_40px_-2px_rgba(160,120,255,0.65)] hover:scale-[1.02] transition-all duration-300" href="#kontak">
+<span>Mulai Proyek</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="inline-flex items-center justify-center gap-space-xs px-space-lg py-3 rounded-lg font-headline-sm text-label-mono-lg font-medium bg-surface-container-high text-on-surface hover:bg-surface-bright hover:text-secondary transition-all duration-200" href="#portofolio">
+<span>Lihat Portofolio</span>
+<span class="material-symbols-outlined text-[18px]">terminal</span>
+</a>
+</div>
+<!-- Trust Indicators Strip -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-space-sm pt-space-md">
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-mono-sm text-label-mono-sm"><strong class="text-on-surface font-semibold">99%</strong> Kepuasan Klien</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<span class="font-label-mono-sm text-label-mono-sm"><strong class="text-on-surface font-semibold">&lt;24 Jam</strong> SLA Respons</span>
+</div>
+<div class="flex items-center gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-tertiary text-[20px]">security</span>
+<span class="font-label-mono-sm text-label-mono-sm"><strong class="text-on-surface font-semibold">Enterprise</strong> Grade</span>
+</div>
+</div>
+</div>
+<!-- Right Column: Interactive Mascot & System Architecture Card (Col span 5) -->
+<div class="lg:col-span-5 relative">
+<!-- Floating Accent Tags -->
+<div class="relative w-full rounded-2xl bg-surface-container-low p-space-md shadow-2xl overflow-hidden">
+<!-- Background Grid Matrix Accent -->
+<div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#958ea0_1px,transparent_1px)] [background-size:16px_16px]"></div>
+<!-- Top Interactive Bar -->
+<div class="flex items-center justify-between pb-space-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+</div>
+<span class="font-label-code-badge text-label-code-badge text-outline tracking-wider uppercase">mst-agent-cluster-01.local</span>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-full">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-code-badge text-label-code-badge text-secondary">LIVE</span>
+</div>
+</div>
+<!-- Central Mascot Display Container -->
+<div class="relative flex flex-col items-center justify-center py-space-md">
+<!-- Glow Base -->
+<div class="absolute w-56 h-56 bg-primary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<!-- Floating Mascot Image from context prompt -->
+<div class="relative z-10 w-64 h-64 flex items-center justify-center transition-transform hover:scale-105 duration-500">
+<img alt="Mindie MST Virtual Tech Mascot" class="w-full h-full object-contain drop-shadow-[0_20px_35px_rgba(139,92,246,0.35)]" src="https://lh3.googleusercontent.com/aida/AEtjO1V2aXKhO2VjSZLCRkJ69UcRX0e2VedcfQYg-06Qr0YLp4K7mc1R45MVkiVhkFccx00_KKAxyUNHEvi2X8-NmGwu4NbUdTxzzRil6EI9VfYW1CsFIkfUqQLUKhQiGtgJOxPzpfAjPTsX4fissPOmN26g3ceTUGT6GVIlsGWCsWoWqqXG5u31kgrNzSEhwHOTGDDN9RlTx54Hbjlj4wzDZgqhS9iqriYADFWgEFb4mEmB9SqUFRQZytN163Y"/>
+</div>
+<!-- Floating Code Tag (Left) -->
+<div class="absolute top-8 left-2 bg-surface-container-highest/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-2 -rotate-3 hover:rotate-0 transition-transform">
+<span class="material-symbols-outlined text-[16px] text-primary">data_object</span>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">&lt;/code&gt; ready</span>
+</div>
+<!-- Floating Status Tag (Right Bottom) -->
+<div class="absolute bottom-6 right-2 bg-surface-container-high/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-lg flex items-center gap-2 rotate-2 hover:rotate-0 transition-transform">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-label-mono-sm text-label-mono-sm text-on-surface font-semibold">Online 99.98%</span>
+</div>
+</div>
+<!-- Bottom Micro Terminal Monitor -->
+<div class="bg-surface-container-lowest p-space-sm rounded-xl font-label-mono-sm text-label-mono-sm space-y-1">
+<div class="flex items-center justify-between text-outline text-xs pb-1">
+<span>KERNEL: MST-SYS-V4</span>
+<span class="text-secondary font-mono">LATENCY: 12ms</span>
+</div>
+<p class="text-on-surface-variant text-xs"><span class="text-primary font-bold">mst@core:~$</span> docker compose up --build mst-service-suite</p>
+<p class="text-secondary text-xs font-mono">&gt; [READY] 6 microservices listening on port 8080. Zero vulnerabilities detected.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 2. ABOUT SECTION (TENTANG & PHILOSOPHY)    -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl" id="tentang">
+<!-- Section Identifier -->
+<div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 01</span>
+<span>TENTANG KAMI</span>
+<span class="w-12 h-px bg-outline-variant"></span>
+</div>
+<!-- Editorial Statement -->
+<h2 class="font-headline-lg text-headline-lg text-on-surface max-w-4xl tracking-tight leading-tight pt-space-xs">
+      Kami percaya setiap ide memiliki kesempatan untuk menjadi <span class="text-primary">produk digital yang nyata,</span> tangguh, dan berdaya saing global.
+    </h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg mt-space-xl">
+<!-- Left Editorial Story (Col 5) -->
+<div class="lg:col-span-5 flex flex-col justify-between gap-space-md">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          Berawal dari sebuah komitmen mendalam terhadap arsitektur piranti lunak berkualitas tinggi, Mind Software Technology bertransformasi menjadi mitra strategis untuk korporasi, UMKM inovatif, dan startup terkemuka.
+        </p>
+<p class="font-body-md text-body-md text-outline leading-relaxed">
+          Kami menolak jalan pintas teknis ('technical debt'). Setiap baris kode yang kami rilis melewati pengujian otomatis yang ketat, standarisasi CI/CD tingkat lanjut, serta optimasi performa level milidetik.
+        </p>
+<div class="p-space-md rounded-xl bg-surface-container-low flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">verified</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">100% Kepemilikan Kode</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Hak cipta penuh, dokumentasi rapi, dan repositori diserahkan utuh kepada Anda.</p>
+</div>
+</div>
+</div>
+<!-- Right 3 Core Values (Col 7) -->
+<div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-space-md">
+<!-- Card 1 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary font-mono tracking-wider">01 // VALUE</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high group-hover:bg-primary-container/20 flex items-center justify-center text-primary mt-space-md transition-colors">
+<span class="material-symbols-outlined text-[22px]">speed</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-sm">Kecepatan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Solusi tangkas dan proses delivery terukur menggunakan metodologi Agile terkontrol.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-secondary font-mono flex items-center gap-1">
+<span>VELOCITY DRIVEN</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-primary font-mono tracking-wider">02 // VALUE</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high group-hover:bg-primary-container/20 flex items-center justify-center text-primary mt-space-md transition-colors">
+<span class="material-symbols-outlined text-[22px]">palette</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-sm">Estetika</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Desain human-centered, intuitif, berkarakter, dan berstandar internasional.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-primary font-mono flex items-center gap-1">
+<span>PIXEL PRECISION</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container p-space-md rounded-xl flex flex-col justify-between hover:bg-surface-container-high transition-colors group">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-tertiary font-mono tracking-wider">03 // VALUE</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high group-hover:bg-primary-container/20 flex items-center justify-center text-primary mt-space-md transition-colors">
+<span class="material-symbols-outlined text-[22px]">cloud_done</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-sm">Keandalan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-xs">Arsitektur cloud scalable berdaya tahan tinggi dengan jaminan zero downtime.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-tertiary font-mono flex items-center gap-1">
+<span>ZERO DOWNTIME</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Vision & Mission Glass Panel -->
+<div class="mt-space-xl p-space-lg rounded-2xl bg-surface-container-low shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<div class="lg:col-span-4 flex flex-col justify-center">
+<span class="font-label-code-badge text-label-code-badge text-primary uppercase tracking-wider">VISI KAMI</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-space-xs">Menjadi Standard Penentu Kualitas Piranti Lunak Indonesia</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm">Menjadikan rekayasa perangkat lunak tanah air diakui dalam kancah teknologi global dengan standar engineering kelas dunia.</p>
+</div>
+<div class="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="bg-surface-container p-space-md rounded-lg">
+<span class="material-symbols-outlined text-secondary text-[22px]">code_blocks</span>
+<h5 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Standar Rekayasa Ketat</h5>
+<p class="font-body-sm text-body-sm text-outline mt-1">Mengadopsi clean code, microservices, dan automated testing komprehensif.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg">
+<span class="material-symbols-outlined text-primary text-[22px]">handshake</span>
+<h5 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Kolaborasi Transparan</h5>
+<p class="font-body-sm text-body-sm text-outline mt-1">Sprint review mingguan, board akses terbuka, dan komunikasi tanpa birokrasi rumit.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg">
+<span class="material-symbols-outlined text-tertiary text-[22px]">rocket_launch</span>
+<h5 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Akselerasi Pertumbuhan Klien</h5>
+<p class="font-body-sm text-body-sm text-outline mt-1">Fokus pada ROI bisnis konkret, bukan hanya fitur tanpa fungsi bisnis nyata.</p>
+</div>
+<div class="bg-surface-container p-space-md rounded-lg">
+<span class="material-symbols-outlined text-secondary-fixed text-[22px]">school</span>
+<h5 class="font-headline-sm text-headline-sm text-on-surface font-semibold mt-1">Edukasi Talenta Muda</h5>
+<p class="font-body-sm text-body-sm text-outline mt-1">Membina talenta muda Indonesia agar siap berkontribusi pada industri IT modern.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ==================================================== -->
+<!-- 3. SERVICES SECTION (LAYANAN - WIDE STAGGERED LAYOUT) -->
+<!-- ==================================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl" id="layanan">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 02</span>
+<span>LAYANAN UTAMA KAMI</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Keahlian Rekayasa End-to-End</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">
+        Dari konsep arsitektural awal hingga pipeline rilis berskala jutaan pengguna.
+      </p>
+</div>
+<!-- 6 Staggered Editorial Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Service 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg font-mono text-secondary font-semibold">01 / UNDANGAN</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Undangan Digital Eksklusif</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Platform undangan pernikahan &amp; event premium berfitur RSVP real-time, integrasi payment gateway amplop digital, custom audio ambience, dan navigasi interaktif.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-secondary">RSVP System</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-on-surface-variant">Audio Engine</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-primary">QR Gift</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="font-label-mono-sm text-label-mono-sm text-secondary hover:text-primary flex items-center gap-1 font-semibold" href="#kontak">
+<span>Eksplorasi Fitur</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg font-mono text-primary font-semibold">02 / WEB &amp; CLOUD</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">language</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Website &amp; Web-Apps</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Pengembangan web aplikasi modern berbasis Next.js, SSR, optimasi Core Web Vitals 100/100, arsitektur headless CMS, dan performa tinggi bebas lag.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-primary">Next.js 15</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-on-surface-variant">Tailwind CSS</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-secondary">Edge Runtime</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="font-label-mono-sm text-label-mono-sm text-primary hover:text-secondary flex items-center gap-1 font-semibold" href="#kontak">
+<span>Rancang Web App</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg font-mono text-tertiary font-semibold">03 / MOBILE APPS</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">smartphone</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Aplikasi Mobile iOS &amp; Android</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Native &amp; Cross-platform apps menggunakan Flutter &amp; React Native. Menghadirkan sinkronisasi offline terpercaya, performa 60 FPS, dan push notifications terintegrasi.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-tertiary">Flutter Engine</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-on-surface-variant">React Native</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-secondary">Offline First</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="font-label-mono-sm text-label-mono-sm text-tertiary hover:text-primary flex items-center gap-1 font-semibold" href="#kontak">
+<span>Bangun Mobile App</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg font-mono text-secondary-fixed font-semibold">04 / UI-UX SYSTEM</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">design_services</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Desain UI/UX &amp; Design System</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Sistem desain komprehensif, library komponen Figma terstruktur dengan token sinkron, pengujian kegunaan mendalam (usability testing), dan riset interaksi pengguna.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-secondary-fixed">Figma Tokens</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-on-surface-variant">Prototyping</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-primary">UX Research</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="font-label-mono-sm text-label-mono-sm text-secondary-fixed hover:text-primary flex items-center gap-1 font-semibold" href="#kontak">
+<span>Review Desain</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 5 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg font-mono text-primary font-semibold">05 / ENTERPRISE</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">hub</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Custom Software &amp; ERP</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Automasi alur kerja operasional, integrasi rantai pasok (supply chain), sistem inventaris mutakhir, CRM khusus bisnis Anda, dan integrasi API multi-cabang.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-primary">PostgreSQL</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-on-surface-variant">Microservices</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-secondary">RBAC Security</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="font-label-mono-sm text-label-mono-sm text-primary hover:text-secondary flex items-center gap-1 font-semibold" href="#kontak">
+<span>Audit Kebutuhan</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service 6 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all duration-300 group">
+<div>
+<div class="flex items-center justify-between pb-space-md">
+<span class="font-label-mono-lg text-label-mono-lg font-mono text-secondary font-semibold">06 / ACADEMY</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors">terminal</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold group-hover:text-primary transition-colors">Programming Education</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-space-sm leading-relaxed">
+            Mentorship intensif berorientasi industri, code review 1-on-1 bersama Lead Engineer MST, workshop corporate IT, dan studi kasus proyek produksi nyata.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-secondary">1-on-1 Review</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-on-surface-variant">Production Code</span>
+<span class="px-2 py-0.5 rounded text-[11px] font-label-mono-sm bg-surface-container-high text-primary">Certificate</span>
+</div>
+</div>
+<div class="pt-space-lg">
+<a class="font-label-mono-sm text-label-mono-sm text-secondary hover:text-primary flex items-center gap-1 font-semibold" href="#kontak">
+<span>Daftar Mentorship</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 4. PROCESS SECTION (6-STEP TIMELINE)       -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl" id="proses">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-primary uppercase tracking-widest pb-space-xs">
+<span>// 03</span>
+<span>METODOLOGI EKSEKUSI</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Proses Rekayasa 6-Fase Terstruktur</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Kami menghilangkan ketidakpastian proyek melalui transparansi tahap, target deliverable yang jelas, dan review berkelanjutan.
+      </p>
+</div>
+<!-- 6 Nodes Connected Timeline Desktop -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-space-sm relative">
+<!-- Step 1 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary font-mono">PHASE 01</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary my-space-sm">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Discovery &amp; Scoping</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Audit kebutuhan, user persona, validasi problem &amp; penyusunan BRD komprehensif.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-outline">
+<span>Est: Minggu 1</span>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-primary font-mono">PHASE 02</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary my-space-sm">
+<span class="material-symbols-outlined text-[20px]">architecture</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Strategy &amp; Architecture</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Pemilihan tech-stack, desain skema basis data, dan diagram alur sistem cloud.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-outline">
+<span>Est: Minggu 2</span>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-tertiary font-mono">PHASE 03</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-tertiary my-space-sm">
+<span class="material-symbols-outlined text-[20px]">draw</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Design &amp; Prototype</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Wireframing, UI high-fidelity di Figma, dan clickable prototype yang dapat diuji.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-outline">
+<span>Est: Minggu 3-4</span>
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary-fixed font-mono">PHASE 04</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary-fixed my-space-sm">
+<span class="material-symbols-outlined text-[20px]">terminal</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Agile Dev Sprint</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Iterasi coding 2 mingguan, CI/CD terotomasi, dan demo berkala setiap fitur selesai.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-outline">
+<span>Est: Minggu 5-10</span>
+</div>
+</div>
+<!-- Step 5 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-primary-container font-mono">PHASE 05</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-primary-container my-space-sm">
+<span class="material-symbols-outlined text-[20px]">bug_report</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">QA &amp; Stress Test</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Simulasi beban traffic, penetrasi keamanan (pentest), dan pengujian lintas peranti.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-outline">
+<span>Est: Minggu 11</span>
+</div>
+</div>
+<!-- Step 6 -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col justify-between group hover:bg-surface-container transition-all">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary font-mono">PHASE 06</span>
+<div class="w-10 h-10 rounded-lg bg-surface-container-high flex items-center justify-center text-secondary my-space-sm">
+<span class="material-symbols-outlined text-[20px]">rocket</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Deploy &amp; Monitor</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Go-live production, setup APM logging, serah terima kode, dan SLA pemeliharaan.</p>
+</div>
+<div class="pt-space-md font-label-mono-sm text-label-mono-sm text-outline">
+<span>Est: Production</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 5. TECH STACK & WORKSTATION SHOWCASE       -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<div class="bg-surface-container-low p-space-xl rounded-3xl shadow-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg items-center">
+<!-- Left: Engineering Matrix Stack -->
+<div class="lg:col-span-7 flex flex-col gap-space-md">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest">// TECH RADAR 2025</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface font-bold mt-1">Fondasi Teknologi Teruji</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-xl">
+              Kami secara ketat menyeleksi framework dan teknologi yang terbukti mampu menangani skala jutaan koneksi dengan latensi minimal.
+            </p>
+</div>
+<!-- Stack Categories -->
+<div class="space-y-space-md pt-space-xs">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Frontend &amp; Rendering:</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-secondary font-medium">React 19</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-primary font-medium">Next.js App Router</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-on-surface font-medium">Vue.js / Nuxt</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium">TypeScript</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-secondary font-medium">Tailwind CSS</span>
+</div>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Backend &amp; Database:</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-primary font-medium">Node.js / NestJS</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-secondary font-medium">Golang</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-on-surface font-medium">Laravel 11</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-secondary-fixed font-medium">PostgreSQL</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-tertiary font-medium">Redis In-Memory</span>
+</div>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline uppercase">Mobile, Cloud &amp; DevOps:</span>
+<div class="flex flex-wrap gap-2 mt-2">
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-secondary font-medium">Flutter</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-primary font-medium">React Native</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-on-surface font-medium">Docker Swarm / K8s</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-on-surface-variant font-medium">AWS / GCP Cloud</span>
+<span class="px-3 py-1 bg-surface-container-high rounded-md font-label-mono-sm text-label-mono-sm text-secondary font-medium">GitHub CI/CD</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Code Snippet Simulator -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-2xl p-space-md shadow-2xl font-label-mono-sm text-label-mono-sm">
+<div class="flex items-center justify-between pb-3 text-outline">
+<span class="font-mono text-xs text-secondary font-semibold">src/server/cluster.engine.ts</span>
+<div class="flex items-center gap-2">
+<span class="text-xs text-on-surface-variant">TypeScript 5.6</span>
+<span class="material-symbols-outlined text-[16px] text-outline">content_copy</span>
+</div>
+</div>
+<div class="space-y-1 font-mono text-xs leading-relaxed text-on-surface-variant overflow-x-auto py-2">
+<p><span class="text-tertiary">import</span> { MicroService, Resilience } <span class="text-tertiary">from</span> <span class="text-secondary">'@mst/core'</span>;</p>
+<p><span class="text-tertiary">import</span> { Telemetry } <span class="text-tertiary">from</span> <span class="text-secondary">'@mst/observability'</span>;</p>
+<p class="text-outline pt-1">// Pipeline bootstrap initialization</p>
+<p><span class="text-primary font-semibold">export const</span> <span class="text-secondary">appGateway</span> = <span class="text-tertiary">new</span> MicroService({</p>
+<p class="pl-4">tenantId: <span class="text-secondary">'MST-INDONESIA-CORE'</span>,</p>
+<p class="pl-4">resiliencePolicy: Resilience.FAILOVER_RETRY,</p>
+<p class="pl-4">telemetry: <span class="text-tertiary">new</span> Telemetry({ latencyThresholdMs: 25 }),</p>
+<p class="pl-4">clusterNodes: 6,</p>
+<p>});</p>
+<p class="pt-2"><span class="text-outline">// Healthcheck loop</span></p>
+<p><span class="text-primary font-semibold">await</span> appGateway.orchestrate({</p>
+<p class="pl-4">autoScale: <span class="text-primary">true</span>,</p>
+<p class="pl-4">targetRegion: <span class="text-secondary">'ap-southeast-3'</span> <span class="text-outline">// Jakarta Node</span></p>
+<p>});</p>
+<p class="text-secondary pt-2">&gt; Engine operational status: 200 OK [Latency: 8.4ms]</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 6. PORTFOLIO CASE STUDY (PORTOFOLIO)       -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl" id="portofolio">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 04</span>
+<span>STUDI KASUS PRODUKSI</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Karya Nyata yang Memberi Dampak</h2>
+</div>
+<a class="font-label-mono-lg text-label-mono-lg text-primary hover:text-secondary flex items-center gap-1 mt-3 md:mt-0" href="#kontak">
+<span>Diskusikan Kebutuhan Spesifik Anda</span>
+<span class="material-symbols-outlined text-[18px]">arrow_outward</span>
+</a>
+</div>
+<!-- Case Studies Stack (2 Featured + 1 Coming Soon Teaser) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Project 1: MST Undangan Digital Platform (Col 7) -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-3xl p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-secondary bg-surface-container-high px-2.5 py-1 rounded-full uppercase">SAAS PLATFORM // 2024</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Production Live</span>
+</div>
+<!-- Project Preview Image -->
+<div class="w-full h-64 rounded-2xl overflow-hidden my-space-md bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern dark-mode user interface preview of an exclusive wedding invitation web app, sleek glassmorphism panels, elegant typography, gold and soft purple accents, showing an interactive RSVP guest list and QR code payment generator on high resolution desktop screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCN5zP-_fCQznobByavTmEClL3J1c2rRRvWv3ecSDfET0x-iUlRTPnxib_oqoHOzjO_XuNHMS-fOh4zvv7N5qw08j4D8qKOkdpNPEkZE1XLTawohMbTkKrgQRt7uNClQYzcNVvwCq5v-9zr-QJvmhzm_Lgl9ZC_9iIk0tQg8F3SlCZxY81mUzllmy6RI9BxjVVx2eLb9o2rytVjMrK4PtiYLINF_lEHNm9wtBgc0iqkADnnFZq1qMiE"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-mono text-secondary">
+              100,000+ Tamu Terlayani
+            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">MST Undangan Digital Platform</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+            Platform web aplikasi kustom undangan digital interaktif yang mampu menangani lonjakan traffic hingga 15.000 concurrent guest sessions saat waktu resepsi pernikahan serentak.
+          </p>
+<div class="grid grid-cols-2 gap-space-sm my-space-md p-space-sm bg-surface-container rounded-xl">
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Tantangan:</span>
+<p class="font-body-sm text-body-sm text-on-surface">Latensi lambat &amp; crash server saat ribuan tamu serentak mengisi RSVP.</p>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-secondary">Solusi MST:</span>
+<p class="font-body-sm text-body-sm text-on-surface">Redis caching edge CDN dengan arsitektur micro-frontend teroptimasi.</p>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<div class="flex gap-2">
+<span class="px-2 py-0.5 rounded text-xs font-mono bg-surface-container-high text-primary">Next.js 14</span>
+<span class="px-2 py-0.5 rounded text-xs font-mono bg-surface-container-high text-secondary">Supabase</span>
+<span class="px-2 py-0.5 rounded text-xs font-mono bg-surface-container-high text-tertiary">Midtrans API</span>
+</div>
+<span class="material-symbols-outlined text-secondary">open_in_new</span>
+</div>
+</div>
+<!-- Project 2: MST Tiket Management & Fast-QR (Col 5) -->
+<div class="lg:col-span-5 bg-surface-container-low rounded-3xl p-space-lg flex flex-col justify-between hover:bg-surface-container transition-all">
+<div>
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-primary bg-surface-container-high px-2.5 py-1 rounded-full uppercase">ENTERPRISE SYSTEM // 2024</span>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Gate Audit Ready</span>
+</div>
+<!-- Project Preview Image -->
+<div class="w-full h-48 rounded-2xl overflow-hidden my-space-md bg-surface-container-lowest relative">
+<img class="w-full h-full object-cover" data-alt="Futuristic event gate ticketing dashboard interface with real-time analytics graphs, dynamic neon cyan scan feedback status, attendee flow line charts, dark obsidian background, ultra-sleek enterprise UI aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn4s3RMTMD5WjD65RjxNeOzkHq9hOvAvlV3WLKrXZRHPEh4jcl4y22RZCIUCYw6rV0dFHaM4mJQSXB-_n3WytLVas17y5fcegcdrPA5mrasuoCq-hlSHA-KyUFHsYjaeSwsKXwjmtP-X_vBnvLt6gHAl1-i6LUsSdO_FR8aNxdr5l3f7VZEd9QFuP1RdNe2UYoHUsCp-KIsFWqDySh8_2n7Z2YREvDHVl_ZLgFyf60G273Yibux-zf"/>
+<div class="absolute bottom-3 left-3 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-1 rounded-md text-xs font-mono text-primary">
+              Scan Speed: 0.15s / attendee
+            </div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">MST Tiket Management &amp; Fast-QR</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Sistem validasi tiket offline-first untuk festival dan seminar berskala 10.000+ peserta tanpa resiko duplikasi barcode tiket.
+          </p>
+<div class="flex flex-wrap gap-1.5 mt-space-md">
+<span class="px-2 py-0.5 rounded text-xs font-mono bg-surface-container-high text-on-surface">Flutter</span>
+<span class="px-2 py-0.5 rounded text-xs font-mono bg-surface-container-high text-primary">PostgreSQL</span>
+<span class="px-2 py-0.5 rounded text-xs font-mono bg-surface-container-high text-secondary">WebSockets</span>
+</div>
+</div>
+<div class="pt-space-lg flex items-center justify-between">
+<span class="font-label-mono-sm text-label-mono-sm text-primary font-semibold">Zero Fraud Audit History</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Project 3: MST Edu Hub (Full Width Banner / Teaser) -->
+<div class="lg:col-span-12 bg-gradient-to-r from-surface-container-low via-surface-container to-surface-container-low rounded-3xl p-space-lg flex flex-col md:flex-row items-center justify-between gap-space-lg">
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[32px]">school</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-label-code-badge text-label-code-badge text-tertiary bg-surface-container-high px-2 py-0.5 rounded-full uppercase">COMING SOON // Q2 2025</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">MST Edu Hub Platform</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 max-w-2xl">
+              Portal edukasi koding dan simulator wawancara teknis otomatis bertenaga AI untuk melatih talenta software engineer generasi berikutnya di Indonesia.
+            </p>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 px-space-md py-2 rounded-lg bg-surface-container-high text-primary font-label-mono-sm text-label-mono-sm hover:bg-surface-bright transition-colors flex-shrink-0" href="#kontak">
+<span>Daftar Waiting List</span>
+<span class="material-symbols-outlined text-[16px]">notifications</span>
+</a>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 7. METRICS & STATS SECTION                 -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter bg-surface-container-lowest p-space-xl rounded-3xl shadow-xl">
+<div class="flex flex-col">
+<span class="font-label-code-badge text-label-code-badge text-outline tracking-wider font-mono uppercase">COMPLETED WORK</span>
+<span class="font-display-hero text-display-hero text-primary font-bold tracking-tight">150+</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-1">Proyek Selesai</span>
+<span class="font-body-sm text-body-sm text-outline">Tepat waktu &amp; sesuai spesifikasi</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-badge text-label-code-badge text-outline tracking-wider font-mono uppercase">TRUSTED PARTNERS</span>
+<span class="font-display-hero text-display-hero text-secondary font-bold tracking-tight">50+</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-1">Klien Puas</span>
+<span class="font-body-sm text-body-sm text-outline">Startup, B2B hingga perorangan</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-badge text-label-code-badge text-outline tracking-wider font-mono uppercase">CUSTOMER CSAT</span>
+<span class="font-display-hero text-display-hero text-tertiary font-bold tracking-tight">99%</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-1">Tingkat Kepuasan</span>
+<span class="font-body-sm text-body-sm text-outline">Berdasarkan survei review pasca-rilis</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-code-badge text-label-code-badge text-outline tracking-wider font-mono uppercase">RESPONSE SLA</span>
+<span class="font-display-hero text-display-hero text-secondary-fixed font-bold tracking-tight">&lt;24j</span>
+<span class="font-body-md text-body-md text-on-surface font-semibold mt-1">Respon Komunikasi</span>
+<span class="font-body-sm text-body-sm text-outline">Dukungan engineering tanggap 7 hari</span>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 8. TEAM SECTION (7 MEMBERS DESKTOP GRID)   -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl" id="tim">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 05</span>
+<span>TIM TEKNIS MST</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Para Otak di Balik Kode &amp; Desain</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md mt-4 md:mt-0">
+        Insinyur piranti lunak, product thinker, dan desainer antarmuka berpengalaman dengan dedikasi tinggi pada craft.
+      </p>
+</div>
+<!-- Top Row: 4 Members Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-gutter">
+<!-- Member 1 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Professional studio portrait of Reyhan Alfarid, male tech founder and lead architect in dark minimalist turtleneck, smart confident expression, modern soft studio rim lighting with subtle violet tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOkQ3fUdMhEjUTkRXuULkSBHBv3fADhWG3N8JjZLLjR_1ukpSuf9yC7AJm5S0dnm9JeNQxu4UdfEjLhHclXcRC2k4xLMgKgDMzARt0Rcq-khkOib3LP2lWTCVujm1x304-2fmE45xsXtRcMEGJjwu1spoF5l9wJTPUocrZTpgM9dt96NJca_tp83cnwrDxmSb7622FF7i4caL3IiFLY6Ph_vdcfdmHywWgR-y3tdVbAuEY7XL1OpPU"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-secondary">ARCHITECT</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Reyhan Alfarid</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Founder &amp; Lead Architect</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Spesialis arsitektur sistem cloud berskala enterprise &amp; distributed microservices.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Golang / AWS / K8s</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+<!-- Member 2 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Professional studio portrait of Nabila Putri, female Head of Product, poised and confident in dark smart casual attire, clean contemporary lighting, calm tech visionary ambience" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsbZS1wOq4XLtqDYSUfziDtvOSjOrqJM9gqvsJz-K7Fs5Vowfke8sfXc2KrXB0jadwSve8Xd2Mx1F2QfICu0wO9LkhHJsibziv9MHypaIe6STVIRPjZnb5qGSiyJ-NVzK2eOwJj2qZ7aiRVzJadouN1I_ZOg7DXP2rl4OQLTFT6bIwg_dX7KuTHDSBFVDt0iK31Ex0cgmPN_hRzOVM_Y-Tu1MFWfKWWp8eIIZz-ctk4qP6iGo4ZfeE"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-tertiary">PRODUCT</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Nabila Putri</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Head of Product &amp; UX</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Menghubungkan strategi bisnis klien dengan pengalaman digital yang intuitif.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Product Strategy / UX</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+<!-- Member 3 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Professional portrait of Dimas Pratama, senior fullstack developer wearing dark hoodie and glasses, focused sharp demeanor, ambient indigo studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRvkt5rhFKp716wa3YZuPx_mmSn3j9fLkVzr2CQCmi6ieGz2NP2gqwrNWQIDM9tPw4nkZ_neM2TJ8u1B4rZDmx8dAApbKth27g-uTDjY8oyXoBBANz0zoY4zuGIBJxQZsDQt1PLdgjjt6bI8U28M_EzdYBpF2Ymr09rc939CDlIcbEx24H0XcMKFKRtVhrjBYLHnu1XDJkqJ4__r083eLVq-ezXXDv5xEpmeJFmT4-u2SmZR93KzJV"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-secondary">FULLSTACK</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Dimas Pratama</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Senior Fullstack Developer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Pakar ekosistem Next.js, API GraphQL performa tinggi, dan database optimization.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Next.js / Node / SQL</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+<!-- Member 4 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Portrait of Kevin Wijaya, young mobile engineering specialist, friendly confident smile, tech startup studio setting with dark aesthetic and warm subtle edge light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNWW_D-ve4Ul37TdVUsUBYi6dd7sheD-Z8rOF8JgZ-OwdizdRiJI5tZePuM1CsEa_vgtPPcg-DcdtwGYTywqrg3XyAFmt-MtVrWepHNTl2Pfrehc9mdvkwG_S9ahMWxJydyGsoHQuTrjok_rhNSW4sFoNCLJ6KRJitLoWpGl19XUtsWXI7GZq8R1kPJ-oC-QONPz_wDvH4E39Vcw-sbHRSmvQ7Y1u2WzOUyIw9U43t8CTgeLu_rWZn"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-secondary-fixed">MOBILE</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Kevin Wijaya</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Mobile Engineer Specialist</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Membangun aplikasi mobile iOS &amp; Android dengan Flutter dan performa 60 FPS tanpa jeda.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Flutter / Swift / Kotlin</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+</div>
+<!-- Bottom Row: 3 Members Centered Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-3 max-w-5xl mx-auto gap-gutter">
+<!-- Member 5 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Professional portrait of Sarah Angelina, female lead UI UX designer, artistic creative posture, dark stylish wardrobe, soft chromatic lighting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBN2IQWCia-iqw-QrXTWVYlF5Q5A3FCPA2XnuzTyFPwTSUFN3eJCjJb2cru9uyZ5eWWJuhGjDYIihK-tAOrgJSK-nd93wVSAcS4NEL5njokcYhddRUJVcAAH6L-OPArY5m9B0fmtG8Uu8mxF3gJI2Kj8n3fdrfzu-Jlr7DBSp3TgglZQ1IyN8Uz4r092lnUL5GDlzPjS0C6Neku8WWHYoa6ke0HEmC8-C0LdyAx7e6vHtY28tdcOEFB"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-primary">DESIGN SYSTEM</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Sarah Angelina</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Lead UI/UX Designer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Mastermind sistem token Figma, prototipe interaktif mikro, dan tipografi digital.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Figma / Design Tokens</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+<!-- Member 6 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Portrait of Arya Wicaksono, DevOps and Cloud Security engineer, serious tech enthusiast aura, dark ambient room with blurred multi-monitor glow in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAtHuHTBoHgGvtLurSrWx7nT6K-UC6VNGmCyvAAHfegAC1UehIehIpAPEqRC2i0IW_oT3iCJ9lMhDwmq3BMJl7auYjTDZB6S732hfz_qePh081w8eQuH3W1CzoHE0t7DxR2b9e8VZSiZ2F5WDg8uAU7rp0aXHidVeHQQPKUHQ_9kohjUxTW0ArLWrA1S5J8sow7ahtmlhU-1Jg0ZGR14eH3ObnqYSe-4DW2C571YGFhfP2hFNXp0jzh"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-secondary">SECURITY</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Arya Wicaksono</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">DevOps &amp; Security Specialist</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Menjaga keandalan cloud, hardening server, konfigurasi CI/CD, dan audit sekuriti berkala.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Kubernetes / Terraform</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+<!-- Member 7 -->
+<div class="bg-surface-container-low p-space-md rounded-2xl flex flex-col justify-between hover:bg-surface-container transition-all group">
+<div>
+<div class="w-full h-56 rounded-xl overflow-hidden mb-space-sm bg-surface-container-high relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Portrait of Fajar Ramadhan, tech educator and senior code reviewer, inspiring educator expression, modern tech workspace setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATPZsWzn9dkYWXK1QmzWs6VLbXIlc0NSrTpletAsjfP7BV9hPxM3NEJQ7yRP7z3EX119nIYgH_sy58qz-8FIjUiH-bUiZk3S6bky51XJVR_HI_HIU_1En_PaiV7KMIVYOvu6IsRyX3Juiml5TDIbPHAuUiqWvhBkVA_gWNgD__pNGKT9_ofEH6LBvFCGFgxqLOKlIf8DLa-2NtlIVynMFdDklXCUrhov8xz6xVYvacBY1duRGeraEs"/>
+<span class="absolute top-2 right-2 bg-surface-container-lowest/80 backdrop-blur px-2 py-0.5 rounded text-[10px] font-mono text-tertiary">EDUCATION</span>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-bold">Fajar Ramadhan</h4>
+<span class="font-label-mono-sm text-label-mono-sm text-primary">Tech Curriculum &amp; Code Reviewer</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2">Merancang materi mentorship intensif dan mengawal standar kualitas kode junior developer.</p>
+</div>
+<div class="flex items-center justify-between pt-space-sm">
+<span class="font-label-code-badge text-label-code-badge text-outline">Code Quality / Mentoring</span>
+<span class="material-symbols-outlined text-[18px] text-outline hover:text-primary cursor-pointer">share</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 9. INSIDE MST (CULTURE & BEHIND THE SCENE) -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl">
+<div class="text-center max-w-2xl mx-auto mb-space-xl">
+<div class="inline-flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 06</span>
+<span>BUDAYA ENGINEERING KAMI</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Di balik setiap produk digital, ada proses, ide, dan manusia.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">
+        Kami membangun kultur engineering yang menghargai ketelitian, komunikasi asinkron yang sehat, serta diskusi desain yang terbuka.
+      </p>
+</div>
+<!-- Asymmetric 3-Column Bento Collage -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col justify-between">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-primary uppercase">CULTURE // 01</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Deep Work &amp; Async First</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Menghindari rapat yang tidak perlu. Dokumentasi tertulis yang jelas memberi ruang para engineer untuk fokus menulis kode berkualitas tanpa distraksi.
+          </p>
+</div>
+<div class="h-32 rounded-lg bg-surface-container-high mt-space-md p-space-sm flex flex-col justify-between font-mono text-xs text-outline">
+<span>&gt; git log --author="MST-Team"</span>
+<span class="text-secondary font-semibold">&gt; 1,420 commits reviewed this quarter</span>
+<span class="text-on-surface-variant">&gt; Mean review time: 42 minutes</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col justify-between">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-secondary uppercase">CULTURE // 02</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Peer Review Tanpa Kompromi</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Setiap Pull Request harus disetujui minimal oleh dua senior reviewer sebelum merge. Kami memastikan nihil celah keamanan dan konsistensi arsitektur.
+          </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container mt-space-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary text-[24px]">rule</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">100% PR Verified</div>
+<span class="text-xs text-on-surface-variant">Automated linting &amp; unit test coverage &gt; 85%</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-low rounded-2xl p-space-md flex flex-col justify-between">
+<div>
+<span class="font-label-code-badge text-label-code-badge text-tertiary uppercase">CULTURE // 03</span>
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold mt-1">Continuous Critique &amp; Empati</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-2 leading-relaxed">
+            Desainer dan engineer kami duduk bersama meninjau micro-animation, aksesibilitas kontras, dan kemudahan navigasi bagi pengguna akhir.
+          </p>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container mt-space-md flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-tertiary text-[24px]">accessibility_new</span>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-bold">WCAG AA Standard</div>
+<span class="text-xs text-on-surface-variant">Aksesibel untuk semua kelompok pengguna</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 10. TESTIMONIALS SECTION                   -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl">
+<div class="flex items-center justify-between mb-space-xl">
+<div>
+<div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 07</span>
+<span>SUARA MITRA &amp; KLIEN</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Dipercaya oleh Bisnis yang Bertumbuh</h2>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-mono-lg text-label-mono-lg font-bold text-on-surface">4.98 / 5.0 Global Rating</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Review 1 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-secondary pb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+            "Sistem undangan kustom dari MST luar biasa stabil. Di hari H pernikahan kami, ratusan tamu serentak buka link tanpa ada lag ataupun crash. Desainnya sangat elegan dan modern!"
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center font-bold text-primary">AN</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Anindya &amp; Raditya</div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Klien Undangan Eksklusif</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-secondary pb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+            "Tim MST bukan hanya developer yang terima brief lalu hilang. Mereka aktif memberi saran optimasi arsitektur cloud yang menghemat biaya server bulanan kami hingga 40%."
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary/20 flex items-center justify-center font-bold text-secondary">HS</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hendra Setiawan</div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">CTO, FinEdge Nusantara</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="bg-surface-container-low p-space-lg rounded-2xl flex flex-col justify-between">
+<div>
+<div class="flex gap-1 text-secondary pb-space-sm">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant italic leading-relaxed">
+            "Gate check-in QR scanner untuk festival kami berjalan 0.2 detik per tiket. Tidak ada antrian menumpuk di pintu gerbang sama sekali. Sangat profesional dan responsif."
+          </p>
+</div>
+<div class="pt-space-md flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-tertiary/20 flex items-center justify-center font-bold text-tertiary">BP</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-on-surface font-semibold">Bagus Pratama</div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Event Lead, Bandung SoundFest</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 11. CONTACT SECTION (KONTAK & PROYEK FORM) -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-2xl" id="kontak">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+<!-- Left Column: Direct Reachout Info (Col 5) -->
+<div class="lg:col-span-5 flex flex-col justify-between">
+<div>
+<div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary uppercase tracking-widest pb-space-xs">
+<span>// 08</span>
+<span>HUBUNGI KAMI</span>
+</div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight">Siap Memulai Proyek Digital Anda?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-sm leading-relaxed">
+            Ceritakan rencana dan visi produk Anda. Tim Lead Architect kami akan menghubungi Anda dalam kurun waktu kurang dari 24 jam dengan estimasi teknis awal.
+          </p>
+<!-- Direct Channels -->
+<div class="flex flex-col gap-space-md mt-space-lg">
+<a class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low hover:bg-surface-container transition-colors" href="https://wa.me/6281120008920" rel="noopener noreferrer" target="_blank">
+<div class="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">chat</span>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">WhatsApp Direct Engineering</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">+62 811 2000 8920</p>
+<span class="text-xs text-secondary">Respons cepat: 15-30 menit</span>
+</div>
+</a>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Official Studio Email</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">contact@mindsoftware.tech</p>
+<span class="text-xs text-outline">Untuk NDA &amp; RFP resmi</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm p-space-sm rounded-xl bg-surface-container-low">
+<div class="w-10 h-10 rounded-lg bg-tertiary/10 flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">location_on</span>
+</div>
+<div>
+<span class="font-label-mono-sm text-label-mono-sm text-outline">Lokasi Studio</span>
+<p class="font-headline-sm text-headline-sm text-on-surface font-semibold">Tech Valley Corridor Bandung</p>
+<p class="font-body-sm text-body-sm text-outline">Branch: Mega Kuningan, Jakarta Selatan</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quick Guarantee Tag -->
+<div class="mt-space-lg p-space-md rounded-xl bg-surface-container-lowest font-label-mono-sm text-label-mono-sm text-outline flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[20px]">verified_user</span>
+<span>Kerahasiaan data terjamin dengan perjanjian NDA (Non-Disclosure Agreement).</span>
+</div>
+</div>
+<!-- Right Column: Interactive Project Scoping Form (Col 7) -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-xl rounded-3xl shadow-2xl">
+<form class="flex flex-col gap-space-md" id="project-form" onsubmit="event.preventDefault(); const name=document.getElementById('name').value; const svc=document.getElementById('service').value; const budget=document.getElementById('budget').value; const msg=document.getElementById('details').value; window.open(`https://wa.me/6281120008920?text=Halo%20Tim%20MST,%20saya%20${encodeURIComponent(name)}.%20Ingin%20konsultasi%20layanan%20${encodeURIComponent(svc)}%20dengan%20budget%20${encodeURIComponent(budget)}.%20Detail:%20${encodeURIComponent(msg)}`, '_blank');">
+<div class="flex items-center justify-between pb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface font-bold">Formulir Spesifikasi Kebutuhan</h3>
+<span class="font-label-code-badge text-label-code-badge text-secondary font-mono">STEP 01 // BRIEF</span>
+</div>
+<!-- Name & Email Input -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="flex flex-col gap-1">
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant" for="name">Nama Lengkap / Instansi</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder:text-outline" id="name" placeholder="cth. Reyhan Pratama" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant" for="email">Alamat Email</label>
+<input class="w-full bg-surface-container-lowest text-on-surface px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder:text-outline" id="email" placeholder="cth. reyhan@company.com" required="" type="email"/>
+</div>
+</div>
+<!-- Layanan Dropdown -->
+<div class="flex flex-col gap-1">
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant" for="service">Pilihan Solusi yang Dibutuhkan</label>
+<select class="w-full bg-surface-container-lowest text-on-surface px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary font-body-md text-body-md" id="service">
+<option value="Undangan Digital Eksklusif">01. Undangan Digital Eksklusif &amp; RSVP</option>
+<option selected="" value="Website &amp; Web-Apps Modern">02. Website &amp; Web-Apps (Next.js / Cloud)</option>
+<option value="Aplikasi Mobile iOS &amp; Android">03. Aplikasi Mobile iOS &amp; Android (Flutter)</option>
+<option value="Desain UI/UX &amp; Design System">04. Desain UI/UX &amp; Design System</option>
+<option value="Custom Software &amp; ERP Perusahaan">05. Custom Software &amp; ERP Enterprise</option>
+<option value="Programming Mentorship &amp; Training">06. Programming Education / Corporate Mentorship</option>
+</select>
+</div>
+<!-- Budget Range -->
+<div class="flex flex-col gap-1">
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant" for="budget">Estimasi Alokasi Investasi (IDR)</label>
+<select class="w-full bg-surface-container-lowest text-on-surface px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary font-body-md text-body-md" id="budget">
+<option value="&lt; Rp 10 Juta">&lt; Rp 10 Juta (Landing page / Single Module)</option>
+<option selected="" value="Rp 10 - 25 Juta">Rp 10 - 25 Juta (MVP / Undangan Kustom / Web App)</option>
+<option value="Rp 25 - 75 Juta">Rp 25 - 75 Juta (Full Mobile App / Enterprise Web)</option>
+<option value="&gt; Rp 75 Juta">&gt; Rp 75 Juta (Custom ERP / Platform Skala Nasional)</option>
+</select>
+</div>
+<!-- Detail Message -->
+<div class="flex flex-col gap-1">
+<label class="font-label-mono-sm text-label-mono-sm text-on-surface-variant" for="details">Ringkasan Fitur &amp; Ekspektasi Waktu</label>
+<textarea class="w-full bg-surface-container-lowest text-on-surface px-space-md py-3 rounded-lg focus:outline-none focus:ring-1 focus:ring-primary font-body-md text-body-md placeholder:text-outline" id="details" placeholder="Jelaskan gambaran umum alur aplikasi, integrasi yang diinginkan, dan deadline yang ditargetkan..." required="" rows="4"></textarea>
+</div>
+<!-- Submit Button -->
+<button class="w-full mt-2 py-3.5 px-space-lg rounded-lg font-headline-sm text-label-mono-lg font-semibold bg-gradient-to-r from-primary-container to-inverse-primary text-on-primary shadow-[0_0_28px_-6px_rgba(160,120,255,0.4)] hover:shadow-[0_0_36px_-2px_rgba(160,120,255,0.6)] hover:scale-[1.01] transition-all flex items-center justify-center gap-2" type="submit">
+<span>Kirim &amp; Terhubung via WhatsApp MST</span>
+<span class="material-symbols-outlined text-[20px]">send</span>
+</button>
+<span class="text-center font-label-mono-sm text-label-mono-sm text-outline">Pesan otomatis disiapkan langsung ke nomor tim lead architect kami.</span>
+</form>
+</div>
+</div>
+</section>
+<!-- ========================================== -->
+<!-- 12. CALL TO ACTION BANNER (WIDE DESKTOP)   -->
+<!-- ========================================== -->
+<section class="w-full max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg py-space-xl">
+<div class="relative overflow-hidden rounded-3xl bg-gradient-to-r from-surface-container-high via-surface-container to-surface-container-high p-space-2xl text-center flex flex-col items-center justify-center shadow-2xl">
+<!-- Subtle Decorative Aura Behind -->
+<div class="absolute w-96 h-96 bg-primary/15 rounded-full blur-3xl pointer-events-none -top-24"></div>
+<div class="relative z-10 max-w-3xl flex flex-col items-center">
+<span class="font-label-code-badge text-label-code-badge text-secondary bg-surface-container-lowest px-3 py-1 rounded-full uppercase tracking-wider mb-space-sm">
+          START YOUR DIGITAL ACCELERATION
+        </span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface font-extrabold tracking-tight">
+          Mari bangun sesuatu yang berdampak nyata bersama.
+        </h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm max-w-xl">
+          Dari sketsa di papan tulis hingga software yang digunakan ratusan ribu orang setiap hari.
+        </p>
+<div class="flex flex-wrap items-center justify-center gap-space-md mt-space-lg">
+<a class="inline-flex items-center gap-2 px-space-lg py-3 rounded-lg font-headline-sm text-label-mono-lg font-semibold bg-primary-container text-on-primary shadow-[0_0_30px_rgba(160,120,255,0.4)] hover:bg-primary transition-all" href="#kontak">
+<span>Konsultasi Gratis Sekarang</span>
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+</a>
+<a class="inline-flex items-center gap-2 px-space-lg py-3 rounded-lg font-headline-sm text-label-mono-lg font-medium bg-surface-container-lowest text-on-surface hover:text-secondary transition-all" href="#layanan">
+<span>Jelajahi Semua Layanan</span>
+<span class="material-symbols-outlined text-[18px]">north_east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Inline Interactive Script for Smooth Smooth Anchor Navigation -->
+<script>
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      if (targetId && targetId !== '#') {
+        const targetElem = document.querySelector(targetId);
+        if (targetElem) {
+          e.preventDefault();
+          targetElem.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }
+    });
+  });
+</script></main><footer class="w-full bg-surface-container-lowest mt-space-2xl"><div class="max-w-7xl mx-auto px-margin md:px-margin-md lg:px-margin-lg pt-space-2xl pb-space-xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-lg"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-sm"><img alt="Brand logo. - Primary color: #8b5cf6
+- Font: plusJakartaSans
+- Mode: dark
+- Roundness: rounded-md
+" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XG4oCZtDj2ir69WgpWKXJravX1-BlTr9zsOCvRIDynQ_Qn4DeqeXiKTPbKE_I_DOhFTWyx-DDW5DIx_RrOyWrUJdtgvk0nfc41u8kPbgjFZ8zLWCQsAEHUGcq-Xki_96EAmZiE_cYnwY-xC0rnoLkW341C8O4yzibUdjwWcP2yuhc3PkCfREc3MzmylBdwPVjacJdNK1BgLUlIugMy1At8WxFpkr6jNtruhgCKI-PVhb-yB5GyY7QYFKk"/><span class="font-headline-sm text-headline-sm text-on-surface font-bold">Mind Software Technology</span></div><p class="font-body-md text-body-md text-on-surface-variant max-w-sm">Engineering high-resilience digital architecture, mission-critical mobile systems, and intelligent cloud software for scaling enterprises.</p><div class="flex items-center gap-space-xs font-label-code-badge text-label-code-badge text-secondary bg-surface-container-high px-space-sm py-1 rounded-full w-fit"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>PRODUCTION READY SYSTEMS // V4.8</div></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Layanan Utama</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Custom Web &amp; Cloud Platforms</li><li class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Native &amp; Hybrid Mobile Apps</li><li class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">Enterprise API Architecture</li><li class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">AI &amp; Data Automation</li><li class="text-on-surface-variant hover:text-primary transition-colors cursor-pointer">UI/UX &amp; Product Design System</li></ul></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Direktori Projek</h4><ul class="flex flex-col gap-space-xs font-body-sm text-body-sm"><li class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">Fintech Core Engine</li><li class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">Logistics IoT Platform</li><li class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">Healthcare EHR Matrix</li><li class="text-on-surface-variant hover:text-secondary transition-colors cursor-pointer">SaaS Multi-tenant Cloud</li></ul></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Hubungi Studio</h4><div class="flex flex-col gap-space-xs font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-primary">mail</span><span>contact@mindsoftware.tech</span></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[18px] text-secondary">call</span><span>+62 811 2000 8920 (WhatsApp)</span></div><div class="flex items-start gap-space-xs mt-space-xs"><span class="material-symbols-outlined text-[18px] text-tertiary">location_on</span><span>Tech Valley Corridor, Bandung &amp; Mega Kuningan, Jakarta</span></div></div></div></div><div class="mt-space-xl pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-on-surface-variant font-label-mono-sm text-label-mono-sm"><p>© 2025 PT Mind Software Technology (MST). All rights reserved.</p><div class="flex items-center gap-space-md"><span class="hover:text-on-surface cursor-pointer">Privacy Protocol</span><span class="hover:text-on-surface cursor-pointer">Terms of Engineering</span><span class="hover:text-on-surface cursor-pointer">Security Status</span></div></div></div></footer><aside class="fixed bottom-space-lg right-space-lg z-50"><a aria-label="Chat on WhatsApp" class="group flex items-center gap-space-xs px-space-md py-space-sm rounded-full bg-surface-container-high text-on-surface shadow-2xl hover:bg-surface-bright transition-all duration-300" href="https://wa.me/6281120008920" rel="noopener noreferrer" target="_blank"><span class="material-symbols-outlined text-secondary text-[24px]">chat</span><span class="font-label-mono-lg text-label-mono-lg tracking-tight hidden sm:inline-block text-on-surface">WhatsApp MST</span></a></aside></body></html>

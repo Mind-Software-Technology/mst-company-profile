@@ -9,10 +9,7 @@ const navLinks = [
   { label: "Beranda", href: "#beranda" },
   { label: "Tentang", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
-  { label: "Proses", href: "#proses" },
-  { label: "Teknologi", href: "#teknologi" },
   { label: "Portofolio", href: "#portofolio" },
-  { label: "Tim", href: "#tim" },
   { label: "Kontak", href: "#kontak" },
 ];
 
@@ -49,17 +46,13 @@ export default function Navbar() {
 
   return (
     <header
-      className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
+      className={`fixed top-0 inset-x-0 z-50 border-b transition-colors duration-500 ${
         scrolled
-          ? theme === "dark"
-            ? "bg-[#0A0B10]/90 backdrop-blur-2xl border-b border-white/[0.08] shadow-lg shadow-black/30"
-            : "bg-white/90 backdrop-blur-2xl border-b border-black/[0.06] shadow-lg shadow-black/5"
-          : theme === "dark"
-            ? "bg-[#0A0B10]/40 backdrop-blur-md"
-            : "bg-white/40 backdrop-blur-md"
+          ? "border-bd bg-page/95 backdrop-blur-xl"
+          : "border-transparent bg-page/0"
       }`}
     >
-      <nav className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
         {/* Logo */}
         <a
           href="#beranda"
@@ -67,45 +60,46 @@ export default function Navbar() {
             e.preventDefault();
             scrollTo("#beranda");
           }}
-          className="flex items-center gap-3 group"
+          className="flex items-center gap-2.5 group shrink-0"
         >
-          <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-[#8B5CF6]/25 group-hover:shadow-[#8B5CF6]/50 transition-all duration-300 border border-bd shrink-0">
+          <div className="w-9 h-9 rounded-md overflow-hidden border border-bd shrink-0 group-hover:border-[#8B5CF6]/60 transition-colors duration-300">
             <img src="/icon.jpeg" alt="MST Logo" className="w-full h-full object-cover" />
           </div>
-          <span className="font-display text-lg font-bold tracking-tight text-fg">
+          <span className="font-display text-base font-bold tracking-tight text-fg">
             MST
           </span>
         </a>
 
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-1.5 glass px-3 py-1.5 rounded-full">
-          {navLinks.map((link) => (
-            <button
-              key={link.href}
-              onClick={() => scrollTo(link.href)}
-              className={`relative px-4 py-1.5 text-xs font-medium rounded-full transition-colors duration-200 ${
-                active === link.href.slice(1)
-                  ? "text-fg font-semibold"
-                  : "text-fg-muted hover:text-fg"
-              }`}
-            >
-              {link.label}
-              {active === link.href.slice(1) && (
-                <motion.span
-                  layoutId="nav-indicator"
-                  className="absolute inset-0 rounded-full bg-[#8B5CF6]/25 border border-bd -z-10"
-                  transition={{ type: "spring", stiffness: 400, damping: 30 }}
-                />
-              )}
-            </button>
-          ))}
+        {/* Desktop Nav — plain text row, current section marked by an underline, not a pill */}
+        <div className="hidden lg:flex items-center gap-5">
+          {navLinks.map((link) => {
+            const isActive = active === link.href.slice(1);
+            return (
+              <button
+                key={link.href}
+                onClick={() => scrollTo(link.href)}
+                className={`relative py-2 text-[13px] font-medium transition-colors duration-200 ${
+                  isActive ? "text-fg" : "text-fg-muted hover:text-fg"
+                }`}
+              >
+                {link.label}
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-underline"
+                    className="absolute left-0 right-0 -bottom-px h-[2px] bg-[#8B5CF6] rounded-full"
+                    transition={{ type: "spring", stiffness: 420, damping: 32 }}
+                  />
+                )}
+              </button>
+            );
+          })}
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1.5">
           {/* Theme Toggle */}
           <button
             onClick={toggleTheme}
-            className="p-2.5 rounded-xl text-fg-muted hover:text-fg hover:bg-pill transition-all duration-300"
+            className="p-2 rounded-md text-fg-muted hover:text-fg hover:bg-pill transition-colors duration-300"
             aria-label="Toggle tema gelap/terang"
           >
             <AnimatePresence mode="wait">
@@ -117,7 +111,7 @@ export default function Navbar() {
                   exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Sun size={18} />
+                  <Sun size={17} />
                 </motion.div>
               ) : (
                 <motion.div
@@ -127,7 +121,7 @@ export default function Navbar() {
                   exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
                   transition={{ duration: 0.2 }}
                 >
-                  <Moon size={18} />
+                  <Moon size={17} />
                 </motion.div>
               )}
             </AnimatePresence>
@@ -138,51 +132,54 @@ export default function Navbar() {
             href="https://wa.me/6283180553200"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-white rounded-xl bg-[#8B5CF6] hover:bg-[#7c4de6] transition-all duration-300 shadow-lg shadow-[#8B5CF6]/20 hover:shadow-[#8B5CF6]/40 hover:scale-[1.02]"
+            className="group hidden lg:inline-flex items-center gap-1.5 ml-1 px-4 py-2 text-[13px] font-semibold text-white rounded-md bg-[#8B5CF6] hover:bg-[#7c4de6] transition-colors duration-300"
           >
-            Konsultasi Gratis
-            <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+            Konsultasi
+            <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-0.5" />
           </a>
 
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2.5 rounded-xl text-fg-muted hover:text-fg hover:bg-pill transition-all"
+            className="lg:hidden p-2 rounded-md text-fg-muted hover:text-fg hover:bg-pill transition-colors"
             aria-label="Menu"
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileOpen ? <X size={21} /> : <Menu size={21} />}
           </button>
         </div>
       </nav>
 
-      {/* Mobile Menu */}
+      {/* Mobile Menu — current section marked by a left rule, matching the desktop underline motif */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden border-t border-bd bg-page/95 backdrop-blur-2xl overflow-hidden"
+            className="lg:hidden border-t border-bd bg-page/95 backdrop-blur-xl overflow-hidden"
           >
-            <div className="px-6 py-5 space-y-1.5">
-              {navLinks.map((link) => (
-                <button
-                  key={link.href}
-                  onClick={() => scrollTo(link.href)}
-                  className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-xl transition-all duration-200 ${
-                    active === link.href.slice(1)
-                      ? "text-fg bg-[#8B5CF6]/15 border border-[#8B5CF6]/30 font-semibold"
-                      : "text-fg-muted hover:text-fg hover:bg-pill"
-                  }`}
-                >
-                  {link.label}
-                </button>
-              ))}
+            <div className="px-6 py-4">
+              {navLinks.map((link) => {
+                const isActive = active === link.href.slice(1);
+                return (
+                  <button
+                    key={link.href}
+                    onClick={() => scrollTo(link.href)}
+                    className={`block w-full text-left py-3 pl-4 border-l-2 text-sm font-medium transition-colors duration-200 ${
+                      isActive
+                        ? "border-[#8B5CF6] text-fg font-semibold"
+                        : "border-bd text-fg-muted hover:text-fg hover:border-fg-muted"
+                    }`}
+                  >
+                    {link.label}
+                  </button>
+                );
+              })}
               <a
                 href="https://wa.me/6283180553200"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block w-full mt-4 px-4 py-3 text-sm font-semibold text-white text-center rounded-xl bg-[#8B5CF6]"
+                className="block w-full mt-4 px-4 py-3 text-sm font-semibold text-white text-center rounded-md bg-[#8B5CF6]"
               >
                 Konsultasi Gratis
               </a>

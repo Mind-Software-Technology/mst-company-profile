@@ -93,7 +93,7 @@ export default function TechStack() {
           </p>
         </motion.div>
 
-        <motion.div {...staggerContainer(0.1)} className="grid md:grid-cols-5 gap-x-6 gap-y-10">
+        <motion.div {...staggerContainer(0.1)} className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-6 gap-y-10">
           {groups.map((g) => (
             <motion.div
               key={g.name}

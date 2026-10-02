@@ -17,7 +17,7 @@ const items = [
 
 export default function InsideMST() {
   return (
-    <section className="py-24 md:py-32 relative overflow-hidden bg-page">
+    <section className="py-20 md:py-24 relative overflow-hidden bg-page">
       <WaveDivider from="surface" to="page" />
 
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-[#8B5CF6]/12 rounded-full blur-[130px] pointer-events-none" />

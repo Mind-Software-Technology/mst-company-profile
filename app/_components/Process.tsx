@@ -36,19 +36,19 @@ export default function Process() {
 
         <motion.div
           {...staggerContainer(0.12)}
-          className="relative grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-4"
+          className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-4"
         >
-          {/* connecting line — desktop only, spans between the first and last icon centers */}
-          <div className="hidden md:block absolute top-[22px] left-[calc(100%/12)] right-[calc(100%/12)] h-px bg-bd" />
+          {/* connecting line — only once steps are in one row */}
+          <div className="hidden lg:block absolute top-[22px] left-[calc(100%/12)] right-[calc(100%/12)] h-px bg-bd" />
 
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
               variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:text-center"
+              className="relative flex sm:flex-col items-start sm:items-center gap-4 sm:gap-0 sm:text-center"
             >
-              <div className="relative z-10 w-11 h-11 shrink-0 rounded-full bg-surface border border-bd flex items-center justify-center text-[#8B5CF6] font-display font-bold text-sm md:mb-5">
+              <div className="relative z-10 w-11 h-11 shrink-0 rounded-full bg-surface border border-bd flex items-center justify-center text-[#8B5CF6] font-display font-bold text-sm sm:mb-5">
                 {step.icon}
               </div>
               <div>
@@ -56,7 +56,7 @@ export default function Process() {
                 <h3 className="font-display text-base font-bold text-fg mb-1.5">
                   {step.title}
                 </h3>
-                <p className="text-xs text-fg-muted leading-relaxed font-normal md:max-w-[160px] md:mx-auto">
+                <p className="text-xs text-fg-muted leading-relaxed font-normal sm:max-w-[160px] sm:mx-auto">
                   {step.desc}
                 </p>
               </div>

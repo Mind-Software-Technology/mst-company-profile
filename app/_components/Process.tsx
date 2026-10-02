@@ -6,12 +6,12 @@ import { fadeUp, staggerContainer } from "@/lib/animations";
 import WaveDivider from "./WaveDivider";
 
 const steps = [
-  { icon: <Search size={18} />, title: "Discovery", desc: "Memahami masalah, target pengguna, dan tujuan bisnis Anda." },
-  { icon: <Compass size={18} />, title: "Strategy", desc: "Menentukan arsitektur, teknologi, dan roadmap pengerjaan." },
-  { icon: <PenTool size={18} />, title: "Design", desc: "Merancang alur & antarmuka yang intuitif sebelum baris kode pertama." },
-  { icon: <Code2 size={18} />, title: "Development", desc: "Membangun sistem dengan standar kode yang bersih dan terukur." },
-  { icon: <Bug size={18} />, title: "Testing", desc: "Menguji fungsi, performa, dan keamanan sebelum rilis." },
-  { icon: <Rocket size={18} />, title: "Launch", desc: "Meluncurkan produk dan mendampingi pasca-peluncuran." },
+  { icon: <Search size={18} />, title: "Riset", desc: "Memahami masalah, target pengguna, dan tujuan bisnis Anda." },
+  { icon: <Compass size={18} />, title: "Strategi", desc: "Menentukan arsitektur, teknologi, dan roadmap pengerjaan." },
+  { icon: <PenTool size={18} />, title: "Desain", desc: "Merancang alur & antarmuka yang intuitif sebelum baris kode pertama." },
+  { icon: <Code2 size={18} />, title: "Pengembangan", desc: "Membangun sistem dengan standar kode yang bersih dan terukur." },
+  { icon: <Bug size={18} />, title: "Pengujian", desc: "Menguji fungsi, performa, dan keamanan sebelum rilis." },
+  { icon: <Rocket size={18} />, title: "Peluncuran", desc: "Meluncurkan produk dan mendampingi pasca-peluncuran." },
 ];
 
 export default function Process() {
@@ -29,7 +29,7 @@ export default function Process() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
             Proses yang <span className="gradient-text">Jelas & Terukur</span>
           </h2>
-          <p className="text-fg-muted text-base sm:text-lg font-light">
+          <p className="text-fg-muted text-base sm:text-lg font-normal">
             Setiap proyek melewati enam tahap yang sama — tidak ada langkah yang dilewati.
           </p>
         </motion.div>
@@ -38,15 +38,15 @@ export default function Process() {
           {...staggerContainer(0.12)}
           className="relative grid grid-cols-1 md:grid-cols-6 gap-8 md:gap-4"
         >
-          {/* connecting line — desktop only */}
-          <div className="hidden md:block absolute top-[22px] left-[8%] right-[8%] h-px bg-bd" />
+          {/* connecting line — desktop only, spans between the first and last icon centers */}
+          <div className="hidden md:block absolute top-[22px] left-[calc(100%/12)] right-[calc(100%/12)] h-px bg-bd" />
 
           {steps.map((step, i) => (
             <motion.div
               key={step.title}
               variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="relative flex md:flex-col items-start md:items-start gap-4 md:gap-0"
+              className="relative flex md:flex-col items-start md:items-center gap-4 md:gap-0 md:text-center"
             >
               <div className="relative z-10 w-11 h-11 shrink-0 rounded-full bg-surface border border-bd flex items-center justify-center text-[#8B5CF6] font-display font-bold text-sm md:mb-5">
                 {step.icon}
@@ -56,7 +56,7 @@ export default function Process() {
                 <h3 className="font-display text-base font-bold text-fg mb-1.5">
                   {step.title}
                 </h3>
-                <p className="text-xs text-fg-muted leading-relaxed font-light max-w-[160px]">
+                <p className="text-xs text-fg-muted leading-relaxed font-normal md:max-w-[160px] md:mx-auto">
                   {step.desc}
                 </p>
               </div>

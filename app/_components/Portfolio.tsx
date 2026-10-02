@@ -43,7 +43,7 @@ export default function Portfolio() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
             Proyek <span className="gradient-text">Unggulan</span> Kami
           </h2>
-          <p className="text-fg-muted text-base sm:text-lg font-light">
+          <p className="text-fg-muted text-base sm:text-lg font-normal">
             Beberapa studi kasus nyata dari klien yang telah bertransformasi bersama kami.
           </p>
         </motion.div>
@@ -76,7 +76,7 @@ export default function Portfolio() {
                     {p.title}
                   </h3>
 
-                  <p className="text-sm sm:text-base text-fg-muted leading-relaxed mb-4 font-light max-w-md">
+                  <p className="text-sm sm:text-base text-fg-muted leading-relaxed mb-4 font-normal max-w-md">
                     {p.desc}
                   </p>
                   <p className="text-sm font-semibold mb-6" style={{ color: p.color }}>
@@ -122,7 +122,7 @@ export default function Portfolio() {
                 <h3 className="font-display text-xl font-bold text-fg-muted">
                   Segera Hadir
                 </h3>
-                <p className="text-sm text-fg-muted font-light mt-1 max-w-lg">
+                <p className="text-sm text-fg-muted font-normal mt-1 max-w-lg">
                   Proyek baru sedang kami kerjakan bersama klien — nantikan ceritanya di sini.
                 </p>
               </div>

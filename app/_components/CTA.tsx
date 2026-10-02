@@ -24,7 +24,7 @@ export default function CTA() {
               Punya Ide Digital?{" "}
               <span className="gradient-text">Mari Bangun Sesuatu yang Berdampak.</span>
             </h2>
-            <p className="text-fg-muted max-w-2xl mx-auto mb-10 text-base sm:text-lg font-light leading-relaxed">
+            <p className="text-fg-muted max-w-2xl mx-auto mb-10 text-base sm:text-lg font-normal leading-relaxed">
               Konsultasikan ide Anda secara gratis bersama tim ahli kami. Kami siap mewujudkan visi digital Anda menjadi produk yang luar biasa.
             </p>
 

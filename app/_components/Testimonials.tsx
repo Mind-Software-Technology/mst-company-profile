@@ -52,7 +52,7 @@ export default function Testimonials() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4">
             Apa Kata <span className="gradient-text">Klien Kami</span>
           </h2>
-          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-light">
+          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-normal">
             Pendapat jujur dari para klien yang telah bertransformasi bersama layanan digital kami.
           </p>
         </motion.div>
@@ -85,7 +85,7 @@ export default function Testimonials() {
                     ))}
                   </div>
 
-                  <p className="text-fg leading-relaxed text-base sm:text-xl font-light mb-8">
+                  <p className="text-fg leading-relaxed text-base sm:text-xl font-normal mb-8">
                     &ldquo;{testimonials[current].text}&rdquo;
                   </p>
 

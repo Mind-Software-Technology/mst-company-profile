@@ -31,7 +31,7 @@ const services = [
     desc: "Pengembangan aplikasi mobile Android dan iOS berperforma tinggi dengan antarmuka intuitif dan pengalaman pengguna yang mulus.",
     features: ["Android & iOS", "High Performance", "User Friendly"],
     color: "#06B6D4",
-    link: "#",
+    link: "#kontak",
   },
   {
     icon: <Palette size={20} />,
@@ -40,7 +40,7 @@ const services = [
     desc: "Pendekatan berbasis data dengan keindahan estetik dan fungsionalitas intuitif untuk produk digital.",
     features: ["Research", "Prototyping", "Design System"],
     color: "#8B5CF6",
-    link: "#",
+    link: "#kontak",
   },
   {
     icon: <Code2 size={20} />,
@@ -49,7 +49,7 @@ const services = [
     desc: "Sistem internal, dashboard, dan aplikasi yang dirancang khusus untuk alur kerja bisnis Anda — bukan solusi generik yang dipaksakan.",
     features: ["Arsitektur Modern", "API & Integrasi", "Skalabel"],
     color: "#0EA5E9",
-    link: "#",
+    link: "#kontak",
   },
   {
     icon: <GraduationCap size={20} />,
@@ -58,7 +58,7 @@ const services = [
     desc: "Pelatihan pemrograman praktis untuk individu maupun tim internal perusahaan, dibimbing langsung oleh developer aktif.",
     features: ["Web Dev", "Mobile", "Backend", "Database"],
     color: "#8B5CF6",
-    link: "#",
+    link: "#kontak",
   },
 ];
 
@@ -76,7 +76,7 @@ export default function Services() {
             Solusi Lengkap untuk{" "}
             <span className="gradient-text">Bisnis Digital</span>
           </h2>
-          <p className="text-fg-muted text-base sm:text-lg font-light">
+          <p className="text-fg-muted text-base sm:text-lg font-normal">
             Dari konsep hingga peluncuran, kami hadir di setiap tahap perjalanan
             digital Anda.
           </p>
@@ -104,7 +104,7 @@ export default function Services() {
                   <h3 className="font-display text-3xl sm:text-4xl font-bold text-fg mb-4 leading-tight text-balance">
                     {s.title}
                   </h3>
-                  <p className="text-base text-fg-muted leading-relaxed mb-6 font-light max-w-sm">
+                  <p className="text-base text-fg-muted leading-relaxed mb-6 font-normal max-w-sm">
                     {s.desc}
                   </p>
                   <ul className="space-y-2.5 mb-8">
@@ -120,12 +120,22 @@ export default function Services() {
                   </ul>
                   <a
                     href={s.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    target={s.link.startsWith("http") ? "_blank" : undefined}
+                    rel={s.link.startsWith("http") ? "noopener noreferrer" : undefined}
+                    onClick={(e) => {
+                      if (s.link.startsWith("#")) {
+                        e.preventDefault();
+                        const el = document.querySelector(s.link);
+                        if (el) {
+                          const y = el.getBoundingClientRect().top + window.scrollY - 80;
+                          window.scrollTo({ top: y, behavior: "smooth" });
+                        }
+                      }
+                    }}
                     className="group inline-flex items-center gap-2 text-sm font-semibold text-fg border-b border-bd pb-1 hover:border-current transition-colors duration-300"
                     style={{ color: s.color }}
                   >
-                    Selengkapnya
+                    {s.link.startsWith("http") ? "Selengkapnya" : "Konsultasikan Kebutuhan"}
                     <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </a>
                 </motion.div>

@@ -99,7 +99,7 @@ export default function Stats() {
                 <CountUp target={s.value} suffix={s.suffix} />
               </div>
               <p className="text-fg text-sm font-semibold mb-0.5">{s.label}</p>
-              <p className="text-fg-muted text-xs font-light">{s.caption}</p>
+              <p className="text-fg-muted text-xs font-normal">{s.caption}</p>
             </motion.div>
           ))}
 
@@ -111,7 +111,7 @@ export default function Stats() {
               &lt;24 Jam
             </div>
             <p className="text-fg text-sm font-semibold mb-0.5">Respon Komunikasi</p>
-            <p className="text-fg-muted text-xs font-light">SLA cepat via WhatsApp & email</p>
+            <p className="text-fg-muted text-xs font-normal">SLA cepat via WhatsApp & email</p>
           </motion.div>
         </motion.div>
       </div>

@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Tentang", href: "#tentang" },
   { label: "Layanan", href: "#layanan" },
   { label: "Proses", href: "#proses" },
+  { label: "Teknologi", href: "#teknologi" },
   { label: "Portofolio", href: "#portofolio" },
   { label: "Tim", href: "#tim" },
   { label: "Kontak", href: "#kontak" },

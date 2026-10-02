@@ -88,7 +88,7 @@ export default function TechStack() {
             Bukan Sekadar Logo,{" "}
             <span className="gradient-text">Ini Cara Kami Membangun</span>
           </h2>
-          <p className="text-fg-muted text-base sm:text-lg font-light">
+          <p className="text-fg-muted text-base sm:text-lg font-normal">
             Setiap lapisan stack dipilih untuk performa, keamanan, dan skalabilitas jangka panjang.
           </p>
         </motion.div>
@@ -104,7 +104,7 @@ export default function TechStack() {
               <h3 className="font-display text-sm font-bold text-fg uppercase tracking-wide mb-2">
                 {g.name}
               </h3>
-              <p className="text-xs text-fg-muted font-light leading-relaxed mb-4">
+              <p className="text-xs text-fg-muted font-normal leading-relaxed mb-4">
                 {g.caption}
               </p>
               <div className="flex flex-col gap-2">

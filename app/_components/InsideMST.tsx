@@ -31,7 +31,7 @@ export default function InsideMST() {
             Budaya Kerja di{" "}
             <span className="gradient-text">Balik Setiap Proyek</span>
           </h2>
-          <p className="text-fg-muted text-base sm:text-lg font-light max-w-lg">
+          <p className="text-fg-muted text-base sm:text-lg font-normal max-w-lg">
             Bukan sekadar tim yang mengerjakan brief — ini cara kami berpikir, belajar, dan berkolaborasi setiap hari.
           </p>
         </motion.div>

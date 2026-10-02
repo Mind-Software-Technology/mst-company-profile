@@ -21,7 +21,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 15 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 text-base sm:text-lg text-fg-muted max-w-xl leading-relaxed font-light"
+            className="mt-6 text-base sm:text-lg text-fg-muted max-w-xl leading-relaxed font-normal"
           >
             Kami membantu perusahaan mentransformasikan ide menjadi perangkat
             lunak canggih, aman, dan skalabel dengan standar performa tertinggi.

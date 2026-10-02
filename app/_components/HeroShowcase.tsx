@@ -10,8 +10,8 @@ const SHIFT = 180;
 const projects = [
   {
     title: "Undangan Digital MST",
-    category: "Website Invitation",
-    status: "Live Project",
+    category: "Undangan Digital",
+    status: "Proyek Aktif",
     statusColor: "#22c55e",
     image: "/undangan.png",
     isPhoto: true,
@@ -20,8 +20,8 @@ const projects = [
   },
   {
     title: "MST Tiket Management",
-    category: "Dashboard System",
-    status: "Live Project",
+    category: "Sistem Dashboard",
+    status: "Proyek Aktif",
     statusColor: "#22c55e",
     image: "/tiket.png",
     isPhoto: true,
@@ -30,8 +30,8 @@ const projects = [
   },
   {
     title: "Custom Software Development",
-    category: "Enterprise Application",
-    status: "Development",
+    category: "Aplikasi Enterprise",
+    status: "Dalam Pengembangan",
     statusColor: "#f59e0b",
     image: "/illustrations/dev-programming.svg",
     isPhoto: false,
@@ -40,8 +40,8 @@ const projects = [
   },
   {
     title: "Aplikasi Mobile",
-    category: "Mobile App Prototype",
-    status: "Coming Soon",
+    category: "Prototipe Aplikasi Mobile",
+    status: "Segera Hadir",
     statusColor: "#0EA5E9",
     image: "/illustrations/web-mobile-apps.svg",
     isPhoto: false,

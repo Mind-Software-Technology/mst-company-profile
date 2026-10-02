@@ -50,7 +50,7 @@ export default function About() {
               Kami hadir karena banyak bisnis punya ide bagus,{" "}
               <span className="gradient-text">tapi tak punya mitra teknis yang bisa dipercaya.</span>
             </h2>
-            <p className="text-fg-muted text-base sm:text-lg font-light leading-relaxed">
+            <p className="text-fg-muted text-base sm:text-lg font-normal leading-relaxed">
               Mind Software Technology (MST) menggabungkan kreativitas desain dengan ketajaman rekayasa perangkat lunak — bukan sekadar mengerjakan brief, tapi ikut memikirkan cara kerja produk digital yang akan bertahan lama.
             </p>
           </motion.div>
@@ -69,7 +69,7 @@ export default function About() {
                   <h3 className="font-display text-lg font-bold text-fg mb-1.5">
                     {v.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-fg-muted font-light leading-relaxed max-w-md">
+                  <p className="text-xs sm:text-sm text-fg-muted font-normal leading-relaxed max-w-md">
                     {v.desc}
                   </p>
                 </div>
@@ -102,7 +102,7 @@ export default function About() {
               <h3 className="font-display text-2xl sm:text-3xl font-bold text-fg mb-6 leading-snug">
                 Menjadi pelopor solusi teknologi digital masa depan.
               </h3>
-              <p className="text-fg-muted text-sm sm:text-base font-light leading-relaxed">
+              <p className="text-fg-muted text-sm sm:text-base font-normal leading-relaxed">
                 &ldquo;Menjadi perusahaan teknologi terdepan dalam menghadirkan solusi digital yang inovatif, berdampak nyata, berdaya saing global, serta mudah diakses oleh seluruh lapisan bisnis di Indonesia dan dunia.&rdquo;
               </p>
             </div>
@@ -138,7 +138,7 @@ export default function About() {
                     className="flex items-start gap-3.5 p-3.5 rounded-xl bg-pill border border-bd hover:bg-pill-hover transition-colors duration-200"
                   >
                     <CheckCircle2 size={18} className="text-[#0EA5E9] shrink-0 mt-0.5" />
-                    <p className="text-xs sm:text-sm text-fg font-light leading-relaxed">
+                    <p className="text-xs sm:text-sm text-fg font-normal leading-relaxed">
                       {m}
                     </p>
                   </div>

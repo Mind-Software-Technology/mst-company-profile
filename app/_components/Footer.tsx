@@ -34,6 +34,7 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "Tentang", href: "#tentang" },
     { label: "Layanan", href: "#layanan" },
     { label: "Proses", href: "#proses" },
+    { label: "Teknologi", href: "#teknologi" },
     { label: "Portofolio", href: "#portofolio" },
     { label: "Tim", href: "#tim" },
     { label: "Kontak", href: "#kontak" },
@@ -83,7 +84,7 @@ export default function Footer() {
                 MST
               </span>
             </div>
-            <p className="text-sm leading-relaxed mb-6 font-light">
+            <p className="text-sm leading-relaxed mb-6 font-normal">
               Mind Software Technology — Solusi digital terpercaya untuk membangun produk teknologi berkelas dan berdaya saing.
             </p>
             <div className="flex gap-2.5">
@@ -119,7 +120,7 @@ export default function Footer() {
                     {link.href.startsWith("#") ? (
                       <button
                         onClick={() => scrollTo(link.href)}
-                        className="text-sm hover:text-[#8B5CF6] transition-colors duration-200 font-light"
+                        className="text-sm hover:text-[#8B5CF6] transition-colors duration-200 font-normal"
                       >
                         {link.label}
                       </button>
@@ -128,7 +129,7 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm hover:text-[#8B5CF6] transition-colors duration-200 font-light"
+                        className="text-sm hover:text-[#8B5CF6] transition-colors duration-200 font-normal"
                       >
                         {link.label}
                       </a>
@@ -153,12 +154,12 @@ export default function Footer() {
                       href={c.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-sm hover:text-fg transition-colors duration-200 break-all font-light"
+                      className="text-sm hover:text-fg transition-colors duration-200 break-all font-normal"
                     >
                       {c.label}
                     </a>
                   ) : (
-                    <span className="text-sm font-light">{c.label}</span>
+                    <span className="text-sm font-normal">{c.label}</span>
                   )}
                 </li>
               ))}

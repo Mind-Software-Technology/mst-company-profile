@@ -79,7 +79,7 @@ export default function Team() {
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
             Para Ahli di <span className="gradient-text">Balik Layar</span>
           </h2>
-          <p className="text-fg-muted text-base sm:text-lg font-light leading-relaxed max-w-xl">
+          <p className="text-fg-muted text-base sm:text-lg font-normal leading-relaxed max-w-xl">
             Kolaborasi talenta profesional yang berdedikasi menciptakan produk teknologi berkelas dan berinovasi tanpa henti.
           </p>
         </motion.div>
@@ -122,7 +122,7 @@ export default function Team() {
                 >
                   {member.division}
                 </span>
-                <p className="text-xs sm:text-sm text-fg-muted font-light leading-relaxed">
+                <p className="text-xs sm:text-sm text-fg-muted font-normal leading-relaxed">
                   {member.focus}
                 </p>
               </div>

@@ -89,7 +89,7 @@ ${formData.message}`;
             Punya Ide Digital?{" "}
             <span className="gradient-text">Mari Bangun Bersama.</span>
           </h2>
-          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-light leading-relaxed">
+          <p className="text-fg-muted max-w-2xl mx-auto text-base sm:text-lg font-normal leading-relaxed">
             Ceritakan kebutuhan bisnis Anda — tim teknis kami akan merespons langsung dan membantu merumuskan langkah paling tepat.
           </p>
         </motion.div>
@@ -129,7 +129,7 @@ ${formData.message}`;
                       {c.value}
                     </p>
                   )}
-                  <p className="text-xs text-fg-muted font-light">
+                  <p className="text-xs text-fg-muted font-normal">
                     {c.desc}
                   </p>
                 </div>
@@ -145,7 +145,7 @@ ${formData.message}`;
             <h3 className="font-display text-2xl font-bold text-fg mb-2">
               Kirim Pesan Cepat
             </h3>
-            <p className="text-sm text-fg-muted font-light mb-8">
+            <p className="text-sm text-fg-muted font-normal mb-8">
               Isi formulir di bawah ini untuk terhubung langsung via WhatsApp dengan format yang terstruktur.
             </p>
 

@@ -33,10 +33,7 @@ const footerLinks: Record<string, { label: string; href: string }[]> = {
     { label: "Beranda", href: "#beranda" },
     { label: "Tentang", href: "#tentang" },
     { label: "Layanan", href: "#layanan" },
-    { label: "Proses", href: "#proses" },
-    { label: "Teknologi", href: "#teknologi" },
     { label: "Portofolio", href: "#portofolio" },
-    { label: "Tim", href: "#tim" },
     { label: "Kontak", href: "#kontak" },
   ],
 };
@@ -73,7 +70,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-bd bg-surface text-fg-muted">
       <div className="max-w-6xl mx-auto px-6 py-16">
-        <div className="grid md:grid-cols-4 gap-10 mb-14">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
           {/* Column 1: Logo & Description */}
           <motion.div {...fadeUp(0)} className="md:col-span-1">
             <div className="flex items-center gap-2.5 mb-5">

@@ -67,6 +67,11 @@
   50% { opacity: 0.8; transform: scale(1.05); }
 }
 
+@keyframes fill-bar {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+
 /* Base resets */
 @layer base {
   body {
@@ -97,7 +102,10 @@
 }
 
 @utility gradient-text {
-  color: #8B5CF6;
+  background-image: linear-gradient(to right, #8B5CF6, #0EA5E9);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
 
 @utility section-divider {
@@ -107,4 +115,13 @@
 
 @utility text-balance {
   text-wrap: balance;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

@@ -111,14 +111,14 @@ export default function Testimonials() {
             {/* Navigation Buttons */}
             <button
               onClick={prev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 sm:-translate-x-6 p-3 rounded-full bg-surface border border-bd text-fg-muted hover:text-fg hover:border-[#8B5CF6]/50 shadow-xl transition-all hidden sm:block z-20"
+              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-6 p-3 rounded-full bg-surface border border-bd text-fg-muted hover:text-fg hover:border-[#8B5CF6]/50 shadow-xl transition-all hidden md:block z-20"
               aria-label="Testimoni Sebelumnya"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={next}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 p-3 rounded-full bg-surface border border-bd text-fg-muted hover:text-fg hover:border-[#8B5CF6]/50 shadow-xl transition-all hidden sm:block z-20"
+              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-6 p-3 rounded-full bg-surface border border-bd text-fg-muted hover:text-fg hover:border-[#8B5CF6]/50 shadow-xl transition-all hidden md:block z-20"
               aria-label="Testimoni Selanjutnya"
             >
               <ChevronRight size={18} />
@@ -126,18 +126,22 @@ export default function Testimonials() {
           </div>
 
           {/* Dots */}
-          <div className="flex items-center justify-center gap-2 mt-8">
+          <div className="flex items-center justify-center gap-1 mt-8">
             {testimonials.map((_, i) => (
               <button
                 key={i}
                 onClick={() => setCurrent(i)}
-                className={`h-2 rounded-full transition-all duration-300 ${
-                  i === current
-                    ? "bg-[#8B5CF6] w-8"
-                    : "bg-pill hover:bg-pill-hover border border-bd w-2"
-                }`}
+                className="group p-2.5 flex items-center justify-center"
                 aria-label={`Lihat Testimoni ${i + 1}`}
-              />
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all duration-300 ${
+                    i === current
+                      ? "bg-[#8B5CF6] w-8"
+                      : "bg-pill group-hover:bg-pill-hover border border-bd w-2"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

@@ -11,6 +11,8 @@ export default function ScrollBackground() {
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
+    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
     let animationId: number;
     let time = 0;
 
@@ -72,7 +74,9 @@ export default function ScrollBackground() {
       ctx.fillStyle = g3;
       ctx.fillRect(0, 0, w, h);
 
-      animationId = requestAnimationFrame(draw);
+      if (!prefersReducedMotion) {
+        animationId = requestAnimationFrame(draw);
+      }
     };
 
     draw();

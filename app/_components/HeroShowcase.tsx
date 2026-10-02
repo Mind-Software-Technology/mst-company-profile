@@ -98,8 +98,8 @@ export default function HeroShowcase() {
               transition={{ type: "spring", stiffness: 260, damping: 28 }}
               style={{
                 left: "50%",
-                marginLeft: -CARD_WIDTH / 2,
-                width: CARD_WIDTH,
+                marginLeft: `calc(min(${CARD_WIDTH}px, 78vw) / -2)`,
+                width: `min(${CARD_WIDTH}px, 78vw)`,
                 zIndex: 30 - abs * 10,
                 pointerEvents: diff === 0 ? "auto" : "none",
               }}
@@ -112,7 +112,8 @@ export default function HeroShowcase() {
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={p.image}
-                    alt={p.title}
+                    alt={p.isPhoto ? p.title : ""}
+                    aria-hidden={!p.isPhoto}
                     draggable={false}
                     className={p.isPhoto ? "w-full h-full object-cover object-top" : "w-2/3 h-2/3 object-contain"}
                   />
@@ -162,16 +163,20 @@ export default function HeroShowcase() {
           <ChevronLeft size={16} />
         </button>
 
-        <div className="flex items-center gap-1.5">
+        <div className="flex items-center gap-0.5">
           {projects.map((p, i) => (
             <button
               key={p.title}
               onClick={() => setActive(i)}
-              className={`h-1.5 rounded-full transition-all duration-300 ${
-                i === active ? "w-6 bg-[#8B5CF6]" : "w-1.5 bg-pill hover:bg-pill-hover"
-              }`}
+              className="group p-2 flex items-center justify-center"
               aria-label={`Lihat proyek ${i + 1}`}
-            />
+            >
+              <span
+                className={`block h-1.5 rounded-full transition-all duration-300 ${
+                  i === active ? "w-6 bg-[#8B5CF6]" : "w-1.5 bg-pill group-hover:bg-pill-hover"
+                }`}
+              />
+            </button>
           ))}
         </div>
 

@@ -47,14 +47,32 @@ export const metadata: Metadata = {
   },
 };
 
+const themeInitScript = `
+(function () {
+  try {
+    var stored = localStorage.getItem("mst-theme");
+    var theme = stored === "light" || stored === "dark" ? stored : "dark";
+    document.documentElement.classList.remove("dark", "light");
+    document.documentElement.classList.add(theme);
+  } catch (e) {}
+})();
+`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="id" className={`dark scroll-smooth ${satoshi.variable} ${spaceGrotesk.variable}`}>
-      <body className="font-body antialiased selection:bg-[#8B5CF6]/30 selection:text-white overflow-x-hidden">
+    <html
+      lang="id"
+      className={`dark scroll-smooth ${satoshi.variable} ${spaceGrotesk.variable}`}
+      suppressHydrationWarning
+    >
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
+      <body className="font-body antialiased selection:bg-brand-purple/30 selection:text-white overflow-x-hidden">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

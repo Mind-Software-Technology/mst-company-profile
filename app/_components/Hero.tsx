@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="absolute top-10 left-[8%] w-[420px] h-[300px] bg-[#8B5CF6]/15 rounded-full blur-[110px] pointer-events-none -z-10" />
       <div className="absolute bottom-0 right-[6%] w-[380px] h-[280px] bg-[#0EA5E9]/15 rounded-full blur-[110px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         {/* Left — Text Content (5 cols) */}
         <div className="lg:col-span-5 text-left">
           <HeroHeadline />

@@ -64,9 +64,58 @@ const teamMembers = [
   },
 ];
 
+type Member = (typeof teamMembers)[number];
+
+function TeamCard({ member, idx, isLastOdd }: { member: Member; idx: number; isLastOdd: boolean }) {
+  return (
+    <motion.div
+      {...fadeUp(0.05 * idx)}
+      className={`group rounded-2xl border border-bd bg-surface overflow-hidden flex flex-col hover:border-[#8B5CF6]/40 transition-colors duration-300 ${
+        isLastOdd ? "col-span-2 sm:col-span-3 w-1/2 sm:w-1/3 mx-auto" : ""
+      }`}
+    >
+      {/* Visual area */}
+      <div
+        className="relative aspect-[3/4] flex items-center justify-center overflow-hidden"
+        style={{ background: `linear-gradient(160deg, ${member.color}35, ${member.color}08)` }}
+      >
+        <div
+          className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full blur-2xl opacity-40 transition-opacity duration-500 group-hover:opacity-70"
+          style={{ backgroundColor: member.color }}
+        />
+        <span className="relative font-display text-5xl font-bold text-white/90 transition-transform duration-500 group-hover:scale-110">
+          {member.initials}
+        </span>
+        <div
+          className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-surface/80 backdrop-blur-md border border-bd flex items-center justify-center"
+          style={{ color: member.color }}
+        >
+          {member.icon}
+        </div>
+      </div>
+
+      {/* Info */}
+      <div className="p-4 sm:p-5">
+        <h3 className="font-display text-base sm:text-lg font-bold text-fg mb-1">
+          {member.name}
+        </h3>
+        <span
+          className="inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full mb-2.5"
+          style={{ color: member.color, backgroundColor: `${member.color}15` }}
+        >
+          {member.division}
+        </span>
+        <p className="text-xs sm:text-sm text-fg-muted font-normal leading-relaxed">
+          {member.focus}
+        </p>
+      </div>
+    </motion.div>
+  );
+}
+
 export default function Team() {
   return (
-    <section id="tim" className="py-24 md:py-32 relative overflow-hidden bg-surface">
+    <section id="tim" className="py-20 md:py-24 relative overflow-hidden bg-surface">
       <WaveDivider from="page" to="surface" />
 
       <div className="absolute top-0 right-0 w-96 h-96 bg-[#0EA5E9]/12 rounded-full blur-[130px] pointer-events-none" />
@@ -84,49 +133,14 @@ export default function Team() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 sm:gap-6">
           {teamMembers.map((member, idx) => (
-            <motion.div
+            <TeamCard
               key={member.name}
-              {...fadeUp(0.05 * idx)}
-              className="group rounded-2xl border border-bd bg-surface overflow-hidden flex flex-col hover:border-[#8B5CF6]/40 transition-colors duration-300"
-            >
-              {/* Visual area */}
-              <div
-                className="relative aspect-[3/4] flex items-center justify-center overflow-hidden"
-                style={{ background: `linear-gradient(160deg, ${member.color}35, ${member.color}08)` }}
-              >
-                <div
-                  className="absolute -bottom-6 -right-6 w-28 h-28 rounded-full blur-2xl opacity-40 transition-opacity duration-500 group-hover:opacity-70"
-                  style={{ backgroundColor: member.color }}
-                />
-                <span className="relative font-display text-5xl font-bold text-white/90 transition-transform duration-500 group-hover:scale-110">
-                  {member.initials}
-                </span>
-                <div
-                  className="absolute top-3 right-3 w-8 h-8 rounded-lg bg-surface/80 backdrop-blur-md border border-bd flex items-center justify-center"
-                  style={{ color: member.color }}
-                >
-                  {member.icon}
-                </div>
-              </div>
-
-              {/* Info */}
-              <div className="p-4 sm:p-5">
-                <h3 className="font-display text-base sm:text-lg font-bold text-fg mb-1">
-                  {member.name}
-                </h3>
-                <span
-                  className="inline-block text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full mb-2.5"
-                  style={{ color: member.color, backgroundColor: `${member.color}15` }}
-                >
-                  {member.division}
-                </span>
-                <p className="text-xs sm:text-sm text-fg-muted font-normal leading-relaxed">
-                  {member.focus}
-                </p>
-              </div>
-            </motion.div>
+              member={member}
+              idx={idx}
+              isLastOdd={idx === teamMembers.length - 1}
+            />
           ))}
         </div>
       </div>

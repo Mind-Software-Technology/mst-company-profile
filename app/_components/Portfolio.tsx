@@ -30,7 +30,7 @@ const projects = [
 
 export default function Portfolio() {
   return (
-    <section id="portofolio" className="py-24 md:py-32 relative overflow-hidden bg-surface">
+    <section id="portofolio" className="py-20 md:py-24 relative overflow-hidden bg-surface">
       <WaveDivider from="page" to="surface" />
 
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8B5CF6]/12 rounded-full blur-[130px] pointer-events-none" />
@@ -64,7 +64,14 @@ export default function Portfolio() {
                       <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e]/70" />
                     </div>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={p.image} alt={p.title} className="w-full h-auto object-cover" />
+                    <img
+                      src={p.image}
+                      alt={p.title}
+                      width={1536}
+                      height={1024}
+                      className="w-full h-auto aspect-[3/2] object-cover"
+                      loading="lazy"
+                    />
                   </div>
                 </motion.div>
 

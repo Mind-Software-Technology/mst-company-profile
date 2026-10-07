@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import ThemeProvider from "./_components/ThemeProvider";
 
-const satoshi = localFont({
-  src: [
-    { path: "../public/fonts/satoshi-400.woff2", weight: "400", style: "normal" },
-    { path: "../public/fonts/satoshi-500.woff2", weight: "500", style: "normal" },
-    { path: "../public/fonts/satoshi-700.woff2", weight: "700", style: "normal" },
-    { path: "../public/fonts/satoshi-900.woff2", weight: "900", style: "normal" },
-  ],
-  variable: "--font-satoshi",
+const display = localFont({
+  src: "./font/ClashDisplay_Complete/Fonts/WEB/fonts/ClashDisplay-Variable.woff2",
+  weight: "200 700",
+  variable: "--font-display",
   display: "swap",
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-  variable: "--font-space-grotesk",
+const body = localFont({
+  src: "./font/Satoshi_Complete/Fonts/WEB/fonts/Satoshi-Variable.woff2",
+  weight: "300 900",
+  variable: "--font-body",
   display: "swap",
 });
 
@@ -47,17 +41,6 @@ export const metadata: Metadata = {
   },
 };
 
-const themeInitScript = `
-(function () {
-  try {
-    var stored = localStorage.getItem("mst-theme");
-    var theme = stored === "light" || stored === "dark" ? stored : "dark";
-    document.documentElement.classList.remove("dark", "light");
-    document.documentElement.classList.add(theme);
-  } catch (e) {}
-})();
-`;
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -66,14 +49,11 @@ export default function RootLayout({
   return (
     <html
       lang="id"
-      className={`dark scroll-smooth ${satoshi.variable} ${spaceGrotesk.variable}`}
+      className="dark scroll-smooth"
       suppressHydrationWarning
     >
-      <head>
-        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
-      </head>
-      <body className="font-body antialiased selection:bg-brand-purple/30 selection:text-white overflow-x-hidden">
-        <ThemeProvider>{children}</ThemeProvider>
+      <body className={`${display.variable} ${body.variable} font-body antialiased selection:bg-brand-purple/30 selection:text-white overflow-x-hidden`}>
+        {children}
       </body>
     </html>
   );

@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { Briefcase, Users, TrendingUp, Clock } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import WaveDivider from "./WaveDivider";
 
 const stats = [
   {
@@ -75,10 +74,9 @@ function CountUp({ target, suffix }: { target: number; suffix: string }) {
 
 export default function Stats() {
   return (
-    <section className="py-16 md:py-20 relative bg-page">
-      <WaveDivider from="surface" to="page" />
+    <section className="py-20 md:py-24 relative bg-page">
 
-      <div className="max-w-6xl mx-auto px-6 pt-8">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div
           {...staggerContainer(0.1)}
           className="rounded-3xl bg-surface border border-bd shadow-xl p-8 sm:p-10 grid grid-cols-2 lg:grid-cols-4 gap-8"
@@ -95,7 +93,7 @@ export default function Stats() {
               >
                 {s.icon}
               </div>
-              <div className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-1">
+              <div className="font-display tabular-nums text-3xl sm:text-4xl font-bold tracking-tight mb-1">
                 <CountUp target={s.value} suffix={s.suffix} />
               </div>
               <p className="text-fg text-sm font-semibold mb-0.5">{s.label}</p>
@@ -107,7 +105,7 @@ export default function Stats() {
             <div className="w-10 h-10 rounded-lg flex items-center justify-center mb-3 bg-[#0EA5E9]/15 text-[#0EA5E9]">
               <Clock size={20} />
             </div>
-            <div className="font-display text-3xl sm:text-4xl font-bold tracking-tight mb-1 gradient-text">
+            <div className="font-display tabular-nums text-3xl sm:text-4xl font-bold tracking-tight mb-1 gradient-text">
               &lt;24 Jam
             </div>
             <p className="text-fg text-sm font-semibold mb-0.5">Respon Komunikasi</p>

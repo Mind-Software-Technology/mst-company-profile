@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Search, Compass, PenTool, Code2, Bug, Rocket } from "lucide-react";
 import { fadeUp, staggerContainer } from "@/lib/animations";
-import WaveDivider from "./WaveDivider";
 
 const steps = [
   { icon: <Search size={18} />, title: "Riset", desc: "Memahami masalah, target pengguna, dan tujuan bisnis Anda." },
@@ -17,16 +16,14 @@ const steps = [
 export default function Process() {
   return (
     <section id="proses" className="py-20 md:py-24 relative overflow-hidden bg-surface">
-      <WaveDivider from="page" to="surface" />
-
       <div className="absolute top-1/3 right-0 w-80 h-80 bg-[#0EA5E9]/12 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 pt-8">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div {...fadeUp(0)} className="max-w-2xl mb-16">
-          <span className="inline-block text-xs font-semibold text-[#0EA5E9] uppercase tracking-widest mb-3">
+          <span className="inline-block font-body text-xs font-medium text-[#0EA5E9] uppercase tracking-[0.08em] mb-3">
             Cara Kami Bekerja
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-fg mb-4 text-balance">
             Proses yang <span className="gradient-text">Jelas & Terukur</span>
           </h2>
           <p className="text-fg-muted text-base sm:text-lg font-normal">
@@ -48,11 +45,11 @@ export default function Process() {
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
               className="relative flex sm:flex-col items-start sm:items-center gap-4 sm:gap-0 sm:text-center"
             >
-              <div className="relative z-10 w-11 h-11 shrink-0 rounded-full bg-surface border border-bd flex items-center justify-center text-[#8B5CF6] font-display font-bold text-sm sm:mb-5">
+              <div className="relative z-10 w-11 h-11 shrink-0 rounded-full bg-surface border border-bd flex items-center justify-center text-[#8B5CF6] font-body font-semibold text-sm sm:mb-5">
                 {step.icon}
               </div>
               <div>
-                <div className="text-[10px] font-mono text-fg-muted mb-1">0{i + 1}</div>
+                <div className="text-[11px] font-body tabular-nums tracking-[0.08em] text-fg-muted mb-1">0{i + 1}</div>
                 <h3 className="font-display text-base font-bold text-fg mb-1.5">
                   {step.title}
                 </h3>

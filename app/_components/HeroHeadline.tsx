@@ -8,11 +8,14 @@ export default function HeroHeadline() {
       initial={{ opacity: 0, y: 25 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-      className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.12] tracking-tight text-fg"
+      className="font-display uppercase leading-[1] tracking-[-0.02em]"
     >
-      Kami membangun software,
-      <br />
-      <span className="gradient-text">bukan sekadar tampilan.</span>
+      <span className="block text-[clamp(1.25rem,3vw,2rem)] font-light text-white/60 mb-2">
+        Kami membangun software,
+      </span>
+      <span className="block text-[clamp(2rem,6vw,4.5rem)] font-bold text-white">
+        bukan sekadar tampilan
+      </span>
     </motion.h1>
   );
 }

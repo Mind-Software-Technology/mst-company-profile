@@ -77,7 +77,7 @@ export default function Footer() {
               <div className="w-10 h-10 rounded-xl overflow-hidden shadow-lg shadow-[#8B5CF6]/20 border border-bd shrink-0">
                 <img src="/icon.jpeg" alt="MST Logo" className="w-full h-full object-cover" />
               </div>
-              <span className="font-display text-lg font-bold tracking-tight text-fg">
+              <span className="font-body text-lg font-semibold tracking-tight text-fg">
                 MST
               </span>
             </div>
@@ -108,7 +108,7 @@ export default function Footer() {
           {/* Column 2-3: Links */}
           {Object.entries(footerLinks).map(([title, links], i) => (
             <motion.div key={title} {...fadeUp(0.1 * (i + 1))}>
-              <h4 className="font-display text-sm font-bold text-fg mb-5 uppercase tracking-wider">
+              <h4 className="font-body text-xs font-medium text-fg mb-5 uppercase tracking-[0.08em]">
                 {title}
               </h4>
               <ul className="space-y-3">
@@ -139,7 +139,7 @@ export default function Footer() {
 
           {/* Column 4: Contact */}
           <motion.div {...fadeUp(0.3)}>
-            <h4 className="font-display text-sm font-bold text-fg mb-5 uppercase tracking-wider">
+            <h4 className="font-body text-xs font-medium text-fg mb-5 uppercase tracking-[0.08em]">
               Kontak Kami
             </h4>
             <ul className="space-y-3.5">

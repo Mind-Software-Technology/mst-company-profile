@@ -1,147 +1,116 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowUpRight, FolderPlus } from "lucide-react";
-import { fadeUp, fadeUpScale } from "@/lib/animations";
-import WaveDivider from "./WaveDivider";
+import { fadeUp } from "@/lib/animations";
 
-const projects = [
+interface Project {
+  id: number;
+  image: string;
+  category: string;
+  title: string;
+  description: string;
+  featured?: boolean;
+}
+
+const projects: Project[] = [
   {
-    title: "Undangan Digital MST",
-    category: "Undangan Digital",
-    desc: "Platform undangan digital modern dengan fitur RSVP online, galeri foto interaktif, pemutar musik, dan integrasi peta lokasi.",
-    metric: "500+ undangan terkirim",
+    id: 1,
     image: "/undangan.png",
-    link: "https://mst-invite-price.vercel.app/",
-    tags: ["React", "Node.js"],
-    color: "#8B5CF6",
+    category: "Undangan Digital",
+    title: "Undangan Digital MST",
+    description:
+      "Platform undangan digital modern dengan fitur RSVP online, galeri foto interaktif, pemutar musik, dan integrasi peta lokasi.",
+    featured: true,
   },
   {
-    title: "MST Tiket Management",
-    category: "Kolaborasi Tim & Task Tracker",
-    desc: "Platform sistem tiket terintegrasi untuk pembagian tugas tim, pelacakan progres proyek (issue tracking), manajemen alur kerja Agile, dan kolaborasi real-time.",
-    metric: "Produktivitas tim meningkat 50%",
+    id: 2,
     image: "/tiket.png",
-    link: "https://mst-ticket-manager.vercel.app/",
-    tags: ["Next.js", "Tailwind", "Supabase", "Realtime API"],
-    color: "#0EA5E9",
+    category: "Sistem Tiket",
+    title: "MST Tiket Management",
+    description:
+      "Platform sistem tiket terintegrasi untuk pembagian tugas tim, pelacakan progres proyek, dan kolaborasi real-time.",
+  },
+  {
+    id: 3,
+    image: "/palm.jfif",
+    category: "Prototipe Aplikasi",
+    title: "Prototipe Palm Oil",
+    description:
+      "Prototipe aplikasi pengelolaan kebun sawit — memantau area tanam, produksi, dan logistik panen dalam satu dasbor interaktif.",
+  },
+  {
+    id: 4,
+    image: "/ecc.jfif",
+    category: "Company Profile",
+    title: "Website ECC-BTS",
+    description:
+      "Website company profile ECC-BTS dengan tampilan modern, responsif, dan optimasi performa untuk presentasi layanan bisnis.",
+    featured: true,
   },
 ];
 
 export default function Portfolio() {
   return (
     <section id="portofolio" className="py-20 md:py-24 relative overflow-hidden bg-surface">
-      <WaveDivider from="page" to="surface" />
-
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#8B5CF6]/12 rounded-full blur-[130px] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto px-6">
-        <motion.div {...fadeUp(0)} className="max-w-2xl mb-20">
-          <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
-            Portofolio
-          </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
-            Proyek <span className="gradient-text">Unggulan</span> Kami
+        <motion.div {...fadeUp(0)} className="max-w-2xl mb-14">
+          <span className="inline-block font-body text-xs font-medium text-[#0EA5E9] uppercase tracking-[0.08em] mb-3">
+Portofolio
+</span>
+<h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-fg mb-4 text-balance">
+            Proyek unggulan kami
           </h2>
           <p className="text-fg-muted text-base sm:text-lg font-normal">
             Beberapa studi kasus nyata dari klien yang telah bertransformasi bersama kami.
           </p>
         </motion.div>
 
-        <div className="flex flex-col gap-24 md:gap-28">
-          {projects.map((p, i) => {
-            const mirrored = i % 2 === 1;
-            return (
-              <div key={p.title} className="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-                <motion.div
-                  {...fadeUpScale(0)}
-                  className={`lg:col-span-7 relative ${mirrored ? "lg:order-2" : ""}`}
-                >
-                  <div className="rounded-2xl overflow-hidden shadow-2xl border border-bd">
-                    <div className="flex items-center gap-1.5 px-4 py-2.5 bg-surface border-b border-bd">
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#ef4444]/70" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#f59e0b]/70" />
-                      <div className="w-2.5 h-2.5 rounded-full bg-[#22c55e]/70" />
-                    </div>
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={p.image}
-                      alt={p.title}
-                      width={1536}
-                      height={1024}
-                      className="w-full h-auto aspect-[3/2] object-cover"
-                      loading="lazy"
-                    />
-                  </div>
-                </motion.div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 auto-rows-[16rem] md:auto-rows-[17rem] lg:auto-rows-[19rem]">
+          {projects.map((project, index) => (
+            <motion.article
+              key={project.id}
+              {...fadeUp(0.1 + index * 0.08)}
+              className={`group relative overflow-hidden rounded-2xl border border-bd bg-pill ${
+                project.featured ? "md:col-span-2" : ""
+              }`}
+            >
+              <img
+                src={project.image}
+                alt={project.title}
+                className="absolute inset-0 h-full w-full object-cover object-top grayscale transition-all duration-500 ease-out group-hover:scale-[1.04] group-hover:grayscale-0"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/45 to-black/5"
+              />
 
-                <motion.div {...fadeUp(0.1)} className={`lg:col-span-5 ${mirrored ? "lg:order-1" : ""}`}>
-                  <span className="inline-block text-xs font-semibold uppercase tracking-widest mb-3" style={{ color: p.color }}>
-                    {p.category}
-                  </span>
-                  <h3 className="font-display text-2xl sm:text-3xl font-bold text-fg mb-6">
-                    {p.title}
-                  </h3>
-
-                  <p className="text-sm sm:text-base text-fg-muted leading-relaxed mb-4 font-normal max-w-md">
-                    {p.desc}
-                  </p>
-                  <p className="text-sm font-semibold mb-6" style={{ color: p.color }}>
-                    ✦ {p.metric}
-                  </p>
-
-                  <div className="flex flex-wrap gap-2 mb-7">
-                    {p.tags.map((t) => (
-                      <span key={t} className="px-2.5 py-1 text-xs font-medium rounded-md bg-pill text-fg-muted border border-bd">
-                        {t}
-                      </span>
-                    ))}
-                  </div>
-
-                  <a
-                    href={p.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group inline-flex items-center gap-2 text-sm font-semibold border-b border-bd pb-1 hover:border-current transition-colors duration-300"
-                    style={{ color: p.color }}
-                  >
-                    Kunjungi Proyek
-                    <ArrowUpRight size={15} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                  </a>
-                </motion.div>
-              </div>
-            );
-          })}
-
-          {/* Coming soon — full-width honest teaser banner */}
-          <motion.div
-            {...fadeUp(0)}
-            className="rounded-3xl border border-dashed border-bd bg-page/50 p-8 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6"
-          >
-            <div className="flex items-center gap-5">
-              <div className="w-14 h-14 rounded-2xl bg-pill border border-bd flex items-center justify-center text-fg-muted shrink-0">
-                <FolderPlus size={26} />
-              </div>
-              <div>
-                <span className="inline-block text-xs font-semibold text-fg-muted uppercase tracking-widest mb-1.5">
-                  Studi Kasus Berikutnya
+              <div className="relative flex h-full flex-col justify-end p-6 md:p-7">
+                <span className="mb-3 self-start rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.14em] text-white/85 backdrop-blur-sm">
+                  {project.category}
                 </span>
-                <h3 className="font-display text-xl font-bold text-fg-muted">
-                  Segera Hadir
+                <h3
+                  className={`font-display font-semibold tracking-[-0.015em] text-white ${
+                    project.featured ? "text-2xl md:text-3xl" : "text-xl"
+                  }`}
+                >
+                  {project.title}
                 </h3>
-                <p className="text-sm text-fg-muted font-normal mt-1 max-w-lg">
-                  Proyek baru sedang kami kerjakan bersama klien — nantikan ceritanya di sini.
+                <p
+                  className={`mt-2 max-w-md text-sm leading-relaxed text-white/75 transition-colors duration-300 group-hover:text-white/90 ${
+                    project.featured ? "line-clamp-3" : "line-clamp-2"
+                  }`}
+                >
+                  {project.description}
                 </p>
               </div>
-            </div>
-            <a
-              href="#kontak"
-              className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-pill border border-bd text-fg-muted hover:text-fg hover:border-[#8B5CF6]/40 text-sm font-semibold transition-colors duration-300"
-            >
-              Jadi Klien Berikutnya
-              <ArrowUpRight size={15} />
-            </a>
-          </motion.div>
+
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 ring-1 ring-inset ring-[#06b6d4]/0 transition-all duration-500 group-hover:opacity-100 group-hover:ring-[#06b6d4]/40"
+              />
+            </motion.article>
+          ))}
         </div>
       </div>
     </section>

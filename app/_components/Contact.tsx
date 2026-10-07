@@ -4,7 +4,6 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle2 } from "lucide-react";
 import { fadeUp } from "@/lib/animations";
-import WaveDivider from "./WaveDivider";
 
 const contactMethods = [
   {
@@ -13,7 +12,7 @@ const contactMethods = [
     value: "+62 831-8055-3200",
     desc: "Respon cepat untuk konsultasi dan penawaran.",
     href: "https://wa.me/6283180553200",
-    color: "#10B981",
+    color: "#0EA5E9",
   },
   {
     icon: <Mail size={20} />,
@@ -29,7 +28,7 @@ const contactMethods = [
     value: "Indonesia",
     desc: "Layanan remote & kunjungan langsung seluruh Nusantara.",
     href: null,
-    color: "#8B5CF6",
+    color: "#0EA5E9",
   },
   {
     icon: <Clock size={20} />,
@@ -37,7 +36,7 @@ const contactMethods = [
     value: "Senin - Jumat (08:00 - 17:00)",
     desc: "Layanan dukungan sistem aktif 24/7.",
     href: null,
-    color: "#8B5CF6",
+    color: "#0EA5E9",
   },
 ];
 
@@ -75,17 +74,16 @@ ${formData.message}`;
 
   return (
     <section id="kontak" className="py-20 md:py-24 relative overflow-hidden bg-page">
-      <WaveDivider from="surface" to="page" />
 
       {/* Ambient background glow */}
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#8B5CF6]/10 rounded-full blur-[140px] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto px-6 pt-8">
+      <div className="max-w-6xl mx-auto px-6">
         <motion.div {...fadeUp(0)} className="text-center mb-16">
-          <span className="inline-block text-xs font-semibold text-[#8B5CF6] uppercase tracking-widest mb-3">
+          <span className="inline-block font-body text-xs font-medium text-[#0EA5E9] uppercase tracking-[0.08em] mb-3">
             Hubungi Kami
           </span>
-          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-fg mb-4 text-balance">
+          <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-[-0.015em] text-fg mb-4 text-balance">
             Punya Ide Digital?{" "}
             <span className="gradient-text">Mari Bangun Bersama.</span>
           </h2>
@@ -97,7 +95,7 @@ ${formData.message}`;
         <div className="grid lg:grid-cols-12 gap-10 items-start">
           {/* Contact Info Cards */}
           <motion.div {...fadeUp(0.1)} className="lg:col-span-5 space-y-4">
-            {contactMethods.map((c, i) => (
+            {contactMethods.map((c) => (
               <div
                 key={c.title}
                 className="p-5 rounded-2xl bg-surface border border-bd flex items-start gap-4 hover:border-[#8B5CF6]/40 transition-all duration-300 shadow-lg"
@@ -112,7 +110,7 @@ ${formData.message}`;
                   {c.icon}
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="text-xs font-semibold text-fg-muted uppercase tracking-wider mb-1">
+                  <h3 className="font-body text-xs font-medium text-fg-muted uppercase tracking-[0.08em] mb-1">
                     {c.title}
                   </h3>
                   {c.href ? (
@@ -120,12 +118,12 @@ ${formData.message}`;
                       href={c.href}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-base font-bold text-fg hover:text-[#0EA5E9] transition-colors break-all block mb-1"
+                      className="text-base font-semibold text-fg hover:text-[#0EA5E9] transition-colors break-all block mb-1"
                     >
                       {c.value}
                     </a>
                   ) : (
-                    <p className="text-base font-bold text-fg mb-1">
+                    <p className="text-base font-semibold text-fg mb-1">
                       {c.value}
                     </p>
                   )}
@@ -140,7 +138,7 @@ ${formData.message}`;
           {/* Interactive Form */}
           <motion.div
             {...fadeUp(0.2)}
-            className="lg:col-span-7 rounded-3xl bg-surface border border-bd p-8 sm:p-10 shadow-2xl relative"
+            className="lg:col-span-7 rounded-3xl bg-surface border border-bd p-8 sm:p-10 shadow-xl relative"
           >
             <h3 className="font-display text-2xl font-bold text-fg mb-2">
               Kirim Pesan Cepat
@@ -152,7 +150,7 @@ ${formData.message}`;
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-xs font-medium text-fg-muted uppercase tracking-wider mb-2">
+                  <label htmlFor="name" className="block font-body text-xs font-medium text-fg-muted uppercase tracking-[0.08em] mb-2">
                     Nama Lengkap <span className="text-[#ef4444]">*</span>
                   </label>
                   <input
@@ -167,7 +165,7 @@ ${formData.message}`;
                 </div>
 
                 <div>
-                  <label htmlFor="contact" className="block text-xs font-medium text-fg-muted uppercase tracking-wider mb-2">
+                  <label htmlFor="contact" className="block font-body text-xs font-medium text-fg-muted uppercase tracking-[0.08em] mb-2">
                     Email / No. WhatsApp
                   </label>
                   <input
@@ -182,25 +180,25 @@ ${formData.message}`;
               </div>
 
               <div>
-                <label htmlFor="service" className="block text-xs font-medium text-fg-muted uppercase tracking-wider mb-2">
+                <label htmlFor="service" className="block font-body text-xs font-medium text-fg-muted uppercase tracking-[0.08em] mb-2">
                   Layanan yang Diminati
                 </label>
                 <select
                   id="service"
                   value={formData.service}
                   onChange={(e) => setFormData({ ...formData, service: e.target.value })}
-                  className="w-full px-4 py-3.5 rounded-xl bg-page border border-bd text-fg text-sm focus:outline-none focus:border-[#8B5CF6] transition-colors cursor-pointer"
+                  className="w-full px-4 py-3.5 rounded-xl bg-page border border-bd text-fg text-sm focus:outline-none focus:border-[#8B5CF6] transition-colors cursor-pointer [color-scheme:dark]"
                 >
-                  <option value="Undangan Digital">Undangan Digital</option>
-                  <option value="Website Development">Website Development / Company Profile</option>
-                  <option value="Aplikasi Mobile">Aplikasi Mobile Android & iOS</option>
-                  <option value="Desain UI/UX">Desain UI/UX / System Design</option>
-                  <option value="Konsultasi IT Umum">Konsultasi IT / Lainnya</option>
+                  <option value="Undangan Digital" className="bg-[#131520] text-white">Undangan Digital</option>
+                  <option value="Website Development" className="bg-[#131520] text-white">Website Development / Company Profile</option>
+                  <option value="Aplikasi Mobile" className="bg-[#131520] text-white">Aplikasi Mobile Android & iOS</option>
+                  <option value="Desain UI/UX" className="bg-[#131520] text-white">Desain UI/UX / System Design</option>
+                  <option value="Konsultasi IT Umum" className="bg-[#131520] text-white">Konsultasi IT / Lainnya</option>
                 </select>
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-xs font-medium text-fg-muted uppercase tracking-wider mb-2">
+                <label htmlFor="message" className="block font-body text-xs font-medium text-fg-muted uppercase tracking-[0.08em] mb-2">
                   Detail Kebutuhan / Pesan <span className="text-[#ef4444]">*</span>
                 </label>
                 <textarea
@@ -216,7 +214,7 @@ ${formData.message}`;
 
               <button
                 type="submit"
-                className="w-full py-4 px-6 rounded-xl font-bold text-white text-sm bg-[#8B5CF6] hover:bg-[#7c4de6] transition-all duration-300 shadow-lg shadow-[#8B5CF6]/25 flex items-center justify-center gap-2"
+                className="w-full py-3 px-6 rounded-full font-semibold text-white text-sm bg-gradient-to-r from-[#8B5CF6] via-[#0EA5E9] to-[#8B5CF6] shadow-[0_0_24px_-4px_rgba(139,92,246,0.65)] hover:shadow-[0_0_32px_-4px_rgba(139,92,246,0.85)] hover:brightness-110 transition-all duration-300 flex items-center justify-center gap-2"
               >
                 {submitted ? (
                   <>

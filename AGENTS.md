@@ -11,7 +11,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - **Turbopack** default for `dev` and `build`. Use `--webpack` to opt out.
 - **Static export** — `next.config.ts` sets `output: "export"`. No server runtime, no API routes, no server actions.
 - **PostCSS** — `@tailwindcss/postcss` plugin.
-- **Fonts** — Inter (body) + Space Grotesk (display), loaded via `next/font/google` as CSS variables (`--font-inter`, `--font-space-grotesk`).
+- **Fonts** — Satoshi (body) + Clash Display (display), self-hosted in `app/font/` and loaded via `next/font/local` in `app/layout.tsx` as CSS variables (`--font-body`, `--font-display`).
 - **Icons** — Lucide React. **Animations** — Framer Motion.
 
 ## Commands
@@ -37,8 +37,8 @@ No test framework configured.
 - Single package, no monorepo, no `src/`.
 
 ## Design
-- **Dark/light theme** via custom `ThemeProvider` (React context, not next-themes). Persists to `localStorage` key `mst-theme`.
-- **Theme CSS variables** in `@theme inline`: `--color-brand-indigo`, `-indigo-light`, `-indigo-dark`, `-cyan`, `-cyan-light`, `-surface`, `-dark`, `-text`, `-muted`, `-border`. Also `--font-display` (Space Grotesk) and `--font-body` (Inter). Components also use raw `#6366f1` / `#06b6d4` directly with opacity modifiers.
+- **Dark only** — light mode and `ThemeProvider` were removed; CSS variables live on `:root` in `app/globals.css`.
+- **Theme CSS variables** in `@theme inline`: `--color-brand-indigo`, `-indigo-light`, `-indigo-dark`, `-cyan`, `-cyan-light`, `-surface`, `-dark`, `-text`, `-muted`, `-border`. Also `--font-display` (Clash Display) and `--font-body` (Satoshi). Components also use raw `#6366f1` / `#06b6d4` directly with opacity modifiers.
 - **Glassmorphism**: `backdrop-blur-*` + semi-transparent bg + thin `border-white/10`.
 - **Animations**: Framer Motion. Per-component `fadeUp(delay)` helper returns `{ initial, whileInView, viewport: { once: true }, transition }` spread onto `motion.*` elements. All scroll-triggered.
 - **Content**: Indonesian (`lang="id"`, all text in Bahasa Indonesia).

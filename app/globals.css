@@ -2,8 +2,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme inline {
-  --font-display: var(--font-space-grotesk);
-  --font-body: var(--font-satoshi);
+  --font-display: var(--font-display);
+  --font-body: var(--font-body);
 
   /* Brand Colors */
   --color-brand-purple: #8B5CF6;
@@ -25,8 +25,9 @@
   --animate-pulse-glow: pulse-glow 3s ease-in-out infinite;
 }
 
-/* ── Dark Theme (default) ─────────────────── */
-:root.dark, :root {
+/* ── Tema (hanya gelap) ─────────────────── */
+:root {
+  color-scheme: dark;
   --color-page: #0A0B10;
   --color-surface: #131520;
   --color-surface-hover: #1c1f2e;
@@ -39,22 +40,6 @@
   --glass-bg: rgba(19, 21, 32, 0.75);
   --glass-border: rgba(255, 255, 255, 0.08);
   --section-divider-color: rgba(255, 255, 255, 0.08);
-}
-
-/* ── Light Theme ──────────────────────────── */
-:root.light {
-  --color-page: #F8FAFC;
-  --color-surface: #FFFFFF;
-  --color-surface-hover: #F1F5F9;
-  --color-text-main: #0F172A;
-  --color-text-muted: #64748B;
-  --color-border-subtle: rgba(15, 23, 42, 0.08);
-  --color-border-strong: rgba(15, 23, 42, 0.15);
-  --color-pill: rgba(15, 23, 42, 0.04);
-  --color-pill-hover: rgba(15, 23, 42, 0.08);
-  --glass-bg: rgba(255, 255, 255, 0.85);
-  --glass-border: rgba(15, 23, 42, 0.08);
-  --section-divider-color: rgba(15, 23, 42, 0.08);
 }
 
 @keyframes float-slow {
@@ -74,6 +59,29 @@
 
 /* Base resets */
 @layer base {
+  /* Typography: Clash Display (display), Satoshi (body & UI) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  h2 {
+    font-weight: 600;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    font-weight: 400;
+    line-height: 1.65;
+  }
+
+  :root p {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  button, input, textarea, select {
+    font-family: var(--font-body);
+  }
+
   body {
     background-color: var(--color-page);
     color: var(--color-text-main);
@@ -124,4 +132,109 @@
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* Navbar: trapesium miring dengan 4 sudut membulat (r≈8px, tinggi navbar 64px).
+   Tiap sudut 3 titik; versi flat punya jumlah titik sama agar bisa transisi saat scroll. */
+@utility clip-nav {
+  clip-path: polygon(
+    11.5px 0, calc(100% - 11.5px) 0, calc(100% - 5px) 3.45px, calc(100% - 4px) 10.8px,
+    calc(100% - 22px) calc(100% - 5.15px), calc(100% - 25px) calc(100% - 1.42px), calc(100% - 29.5px) 100%,
+    29.5px 100%, 25px calc(100% - 1.42px), 22px calc(100% - 5.15px),
+    4px 10.8px, 5px 3.45px
+  );
+}
+
+@utility clip-nav-flat {
+  clip-path: polygon(
+    0 0, 100% 0, 100% 0, 100% 0,
+    100% 100%, 100% 100%, 100% 100%,
+    0 100%, 0 100%, 0 100%,
+    0 0, 0 0
+  );
+}
+
+/* Tombol navbar (tinggi ±40px): ujung kanan miring sejajar sisi navbar, semua sudut dibulatkan */
+@utility clip-btn {
+  clip-path: polygon(
+    5px 0, calc(100% - 7.2px) 0, calc(100% - 3.1px) 2.2px, calc(100% - 2.5px) 6.75px,
+    calc(100% - 13.8px) calc(100% - 3.2px), calc(100% - 15.6px) calc(100% - 0.9px), calc(100% - 18.4px) 100%,
+    5px 100%, 1px calc(100% - 1px), 0 calc(100% - 5px),
+    0 5px, 1px 1px
+  );
+}
+
+/* Hero: takik di tepi atas panel yang mengikuti bentuk navbar (trapesium, sudut membulat, jarak 8px). Hanya ≥1080px. */
+@utility clip-hero-top {
+  clip-path: polygon(
+    0 0,
+    calc(50% - min(50% + 16px, 520px) - 9.77px) -0.00px,
+    calc(50% - min(50% + 16px, 520px) - 6.95px) 0.29px,
+    calc(50% - min(50% + 16px, 520px) - 4.24px) 1.14px,
+    calc(50% - min(50% + 16px, 520px) - 1.76px) 2.52px,
+    calc(50% - min(50% + 16px, 520px) + 0.39px) 4.37px,
+    calc(50% - min(50% + 16px, 520px) + 2.13px) 6.62px,
+    calc(50% - min(50% + 16px, 520px) + 3.37px) 9.17px,
+    calc(50% - min(50% + 16px, 520px) + 21.63px) 58.83px,
+    calc(50% - min(50% + 16px, 520px) + 22.87px) 61.38px,
+    calc(50% - min(50% + 16px, 520px) + 24.61px) 63.63px,
+    calc(50% - min(50% + 16px, 520px) + 26.76px) 65.48px,
+    calc(50% - min(50% + 16px, 520px) + 29.24px) 66.86px,
+    calc(50% - min(50% + 16px, 520px) + 31.95px) 67.71px,
+    calc(50% - min(50% + 16px, 520px) + 34.77px) 68.00px,
+    calc(50% + min(50% + 16px, 520px) - 34.77px) 68.00px,
+    calc(50% + min(50% + 16px, 520px) - 31.95px) 67.71px,
+    calc(50% + min(50% + 16px, 520px) - 29.24px) 66.86px,
+    calc(50% + min(50% + 16px, 520px) - 26.76px) 65.48px,
+    calc(50% + min(50% + 16px, 520px) - 24.61px) 63.63px,
+    calc(50% + min(50% + 16px, 520px) - 22.87px) 61.38px,
+    calc(50% + min(50% + 16px, 520px) - 21.63px) 58.83px,
+    calc(50% + min(50% + 16px, 520px) - 3.37px) 9.17px,
+    calc(50% + min(50% + 16px, 520px) - 2.13px) 6.62px,
+    calc(50% + min(50% + 16px, 520px) - 0.39px) 4.37px,
+    calc(50% + min(50% + 16px, 520px) - -1.76px) 2.52px,
+    calc(50% + min(50% + 16px, 520px) - -4.24px) 1.14px,
+    calc(50% + min(50% + 16px, 520px) - -6.95px) 0.29px,
+    calc(50% + min(50% + 16px, 520px) - -9.77px) -0.00px,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+}
+
+/* Dua tombol berdampingan: potongan miring paralel (kemiringan 14px, tinggi tombol 44px, jarak 6px).
+   Sudut di sisi yang berdekatan sedikit dibulatkan (radius 4px); sudut tepi luar dibulatkan penuh lewat
+   border-radius (22px). Pakai sm:-ml-[8px] pada tombol kanan. */
+@utility clip-pair-l {
+  clip-path: polygon(
+    0 0,
+    calc(100% - 5.47px) -0.00px,
+    calc(100% - 3.66px) 0.43px,
+    calc(100% - 2.24px) 1.64px,
+    calc(100% - 1.52px) 3.36px,
+    calc(100% - 1.66px) 5.21px,
+    calc(100% - 13.11px) 41.21px,
+    calc(100% - 13.68px) 42.34px,
+    calc(100% - 14.56px) 43.23px,
+    calc(100% - 15.68px) 43.80px,
+    calc(100% - 16.92px) 44.00px,
+    0 100%
+  );
+}
+
+@utility clip-pair-r {
+  clip-path: polygon(
+    16.92px -0.00px,
+    15.68px 0.20px,
+    14.56px 0.77px,
+    13.68px 1.66px,
+    13.11px 2.79px,
+    1.66px 38.79px,
+    1.52px 40.64px,
+    2.24px 42.36px,
+    3.66px 43.57px,
+    5.47px 44.00px,
+    100% 100%,
+    100% 0
+  );
 }
